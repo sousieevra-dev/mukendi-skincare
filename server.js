@@ -4,17 +4,17 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Servir les fichiers statiques depuis le dossier "public"
-app.use(express.static(path.join(__dirname, 'public')));
+// Servir les fichiers statiques depuis le dossier "publique"
+app.use(express.static(path.join(__dirname, 'publique')));
 
 // Route principale — renvoie index.html
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'publique', 'index.html'));
 });
 
 // Toutes les autres routes redirigent vers index.html
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'publique', 'index.html'));
 });
 
 app.listen(PORT, () => {
