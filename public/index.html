@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mukendi Skin Care — Guides experts de soins naturels pour révéler l'éclat de votre peau après 45 ans. Ebooks PDF avec méthodes 100% naturelles.">
+  <meta name="description" content="Mukendi Skin Care — Guides experts de soins naturels pour révéler l'éclat de votre peau après 45 ans. Méthodes 100% naturelles validées par un médecin.">
   <title>Mukendi Skin Care — Soins Naturels Premium</title>
 
-  <!-- Google Fonts -->
+  <!-- Polices Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <style>
     /* ========================================
@@ -18,17 +18,19 @@
     :root {
       --fond-principal: #F5F1EA;
       --fond-secondaire: #EBE5D9;
+      --fond-fonce: #3D2F26;
       --accent-principal: #7C8C5E;
-      --accent-principal-hover: #6A7A4E;
+      --accent-hover: #6B7A4F;
       --accent-secondaire: #C97B5C;
       --accent-secondaire-hover: #B56A4B;
       --texte-principal: #3D2F26;
       --texte-secondaire: #6B5D54;
       --dore: #B8A47C;
+      --etoiles: #D4A017;
       --blanc: #FFFFFF;
-      --ombre-douce: 0 2px 20px rgba(61,47,38,0.08);
+      --ombre-douce: 0 2px 20px rgba(61,47,38,0.07);
       --ombre-carte: 0 4px 30px rgba(61,47,38,0.10);
-      --ombre-elevee: 0 12px 40px rgba(61,47,38,0.15);
+      --ombre-elevee: 0 12px 40px rgba(61,47,38,0.14);
       --radius: 12px;
       --radius-lg: 20px;
       --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -37,37 +39,22 @@
     /* ========================================
        RESET ET BASE
        ======================================== */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
+    html { scroll-behavior: smooth; font-size: 16px; }
 
     body {
-      font-family: 'Lora', Georgia, serif;
+      font-family: 'Nunito Sans', -apple-system, sans-serif;
       color: var(--texte-principal);
-      background-color: var(--fond-principal);
+      background: var(--fond-principal);
       line-height: 1.7;
       font-size: 17px;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
 
     /* ========================================
        TYPOGRAPHIE
@@ -79,52 +66,37 @@
       color: var(--texte-principal);
     }
 
-    h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
-    h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
-    h3 { font-size: clamp(1.3rem, 2.5vw, 1.7rem); }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); }
+    h2 { font-size: clamp(1.7rem, 3.5vw, 2.6rem); }
+    h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
 
     .section-label {
-      font-family: 'Lora', serif;
-      font-size: 0.8rem;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 0.75rem;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--accent-principal);
-      font-weight: 500;
+      font-weight: 600;
       margin-bottom: 12px;
       display: block;
     }
 
     .section-subtitle {
-      font-family: 'Lora', serif;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--texte-secondaire);
-      max-width: 600px;
+      max-width: 620px;
       margin: 0 auto;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
-    .section-header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .section-header h2 {
-      margin-bottom: 16px;
-    }
+    .section-header { text-align: center; margin-bottom: 56px; }
+    .section-header h2 { margin-bottom: 14px; }
 
     /* ========================================
-       CONTENEUR
+       CONTENEUR ET SECTIONS
        ======================================== */
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    section {
-      padding: 100px 0;
-    }
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 100px 0; }
 
     /* ========================================
        BOUTONS
@@ -134,9 +106,9 @@
       align-items: center;
       justify-content: center;
       padding: 16px 36px;
-      font-family: 'Lora', serif;
+      font-family: 'Nunito Sans', sans-serif;
       font-size: 1rem;
-      font-weight: 500;
+      font-weight: 600;
       border-radius: 50px;
       border: 2px solid transparent;
       cursor: pointer;
@@ -153,8 +125,8 @@
     }
 
     .btn-primary:hover {
-      background: var(--accent-principal-hover);
-      border-color: var(--accent-principal-hover);
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
       transform: translateY(-2px);
       box-shadow: 0 6px 24px rgba(124,140,94,0.3);
     }
@@ -171,15 +143,16 @@
       transform: translateY(-2px);
     }
 
-    .btn-terracotta {
+    .btn-cta {
       background: var(--accent-secondaire);
       color: var(--blanc);
       border-color: var(--accent-secondaire);
-      font-size: 1.1rem;
-      padding: 18px 48px;
+      font-size: 1.05rem;
+      padding: 18px 40px;
+      width: 100%;
     }
 
-    .btn-terracotta:hover {
+    .btn-cta:hover {
       background: var(--accent-secondaire-hover);
       border-color: var(--accent-secondaire-hover);
       transform: translateY(-2px);
@@ -187,91 +160,51 @@
     }
 
     /* ========================================
-       1. HEADER — NAVIGATION STICKY
+       1. HEADER
        ======================================== */
     .site-header {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
+      top: 0; left: 0; width: 100%;
       z-index: 1000;
-      padding: 18px 0;
+      padding: 16px 0;
       transition: var(--transition);
       background: transparent;
     }
 
     .site-header.scrolled {
-      background: rgba(245,241,234,0.95);
+      background: rgba(245,241,234,0.96);
       backdrop-filter: blur(12px);
       box-shadow: var(--ombre-douce);
-      padding: 12px 0;
+      padding: 10px 0;
     }
 
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; }
 
-    .logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--texte-principal);
-      letter-spacing: 1px;
-    }
+    .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 700; letter-spacing: 0.5px; }
+    .logo span { color: var(--accent-principal); }
 
-    .logo span {
-      color: var(--accent-principal);
-    }
-
-    /* Navigation desktop */
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      list-style: none;
-    }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
 
     .nav-links a {
-      font-family: 'Lora', serif;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--texte-secondaire);
       transition: var(--transition);
       position: relative;
+      letter-spacing: 0.3px;
     }
 
     .nav-links a::after {
       content: '';
       position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
+      bottom: -4px; left: 0;
+      width: 0; height: 2px;
       background: var(--accent-principal);
       transition: var(--transition);
     }
 
-    .nav-links a:hover {
-      color: var(--accent-principal);
-    }
+    .nav-links a:hover { color: var(--accent-principal); }
+    .nav-links a:hover::after { width: 100%; }
 
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    /* Icône panier */
-    .cart-icon {
-      font-size: 1.2rem;
-      cursor: pointer;
-      color: var(--texte-secondaire);
-      transition: var(--transition);
-      position: relative;
-    }
-
-    .cart-icon:hover { color: var(--accent-principal); }
-
-    /* Hamburger mobile */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -283,31 +216,21 @@
     }
 
     .hamburger span {
-      width: 26px;
-      height: 2px;
+      width: 26px; height: 2px;
       background: var(--texte-principal);
       transition: var(--transition);
       border-radius: 2px;
     }
 
-    .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
-    .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-    /* Menu mobile */
     .mobile-nav {
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
+      top: 0; left: 0;
+      width: 100%; height: 100vh;
       background: rgba(245,241,234,0.98);
       backdrop-filter: blur(20px);
       z-index: 999;
@@ -317,24 +240,19 @@
       gap: 28px;
     }
 
-    .mobile-nav.open {
-      display: flex;
-    }
+    .mobile-nav.open { display: flex; }
 
     .mobile-nav a {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       color: var(--texte-principal);
       font-weight: 500;
-      transition: var(--transition);
     }
 
-    .mobile-nav a:hover {
-      color: var(--accent-principal);
-    }
+    .mobile-nav a:hover { color: var(--accent-principal); }
 
     /* ========================================
-       2. HERO SECTION
+       2. HERO
        ======================================== */
     .hero {
       min-height: 100vh;
@@ -348,46 +266,41 @@
     .hero::before {
       content: '';
       position: absolute;
-      top: -120px;
-      right: -120px;
-      width: 500px;
-      height: 500px;
+      top: -100px; right: -100px;
+      width: 450px; height: 450px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(124,140,94,0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(124,140,94,0.06) 0%, transparent 70%);
       pointer-events: none;
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      gap: 50px;
       align-items: center;
     }
 
-    .hero-content {
-      padding-right: 20px;
-    }
+    .hero-content { padding-right: 10px; }
 
-    .hero-content .section-label {
-      margin-bottom: 20px;
-    }
+    .hero-content .section-label { margin-bottom: 18px; }
 
-    .hero-content h1 {
-      margin-bottom: 24px;
-    }
+    .hero-content h1 { margin-bottom: 20px; }
 
     .hero-description {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--texte-secondaire);
-      margin-bottom: 36px;
+      margin-bottom: 32px;
       line-height: 1.8;
       max-width: 500px;
     }
 
-    .hero-buttons {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
+    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
+
+    .hero-trust {
+      font-size: 0.8rem;
+      color: var(--texte-secondaire);
+      opacity: 0.8;
+      line-height: 1.6;
     }
 
     .hero-image {
@@ -397,32 +310,15 @@
       box-shadow: var(--ombre-carte);
     }
 
-    .hero-image img {
-      width: 100%;
-      height: 600px;
-      object-fit: cover;
-    }
+    .hero-image img { width: 100%; height: 580px; object-fit: cover; }
 
     .hero-image::after {
       content: '';
       position: absolute;
       inset: 0;
-      border: 1px solid rgba(184,164,124,0.2);
+      border: 1px solid rgba(184,164,124,0.15);
       border-radius: var(--radius-lg);
       pointer-events: none;
-    }
-
-    /* Décoration feuille */
-    .leaf-deco {
-      position: absolute;
-      width: 80px;
-      height: 80px;
-      bottom: -20px;
-      left: -20px;
-      background: var(--accent-principal);
-      opacity: 0.1;
-      border-radius: 50% 0 50% 0;
-      transform: rotate(-15deg);
     }
 
     /* ========================================
@@ -430,21 +326,15 @@
        ======================================== */
     .trust-bar {
       background: var(--fond-secondaire);
-      padding: 28px 0;
-      border-top: 1px solid rgba(184,164,124,0.15);
-      border-bottom: 1px solid rgba(184,164,124,0.15);
+      padding: 24px 0;
+      border-top: 1px solid rgba(184,164,124,0.12);
+      border-bottom: 1px solid rgba(184,164,124,0.12);
     }
 
-    .trust-items {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
+    .trust-items { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
 
     .trust-item {
-      font-family: 'Lora', serif;
-      font-size: 0.92rem;
+      font-size: 0.88rem;
       color: var(--texte-secondaire);
       display: flex;
       align-items: center;
@@ -452,24 +342,56 @@
       white-space: nowrap;
     }
 
-    .trust-item .check {
-      color: var(--accent-principal);
-      font-weight: 700;
-      font-size: 1.1rem;
+    /* ========================================
+       4. AVANT / APRÈS
+       ======================================== */
+    #transformations { background: var(--fond-principal); }
+
+    .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+
+    .ba-card {
+      background: var(--blanc);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--ombre-douce);
+      transition: var(--transition);
     }
+
+    .ba-card:hover { transform: translateY(-4px); box-shadow: var(--ombre-carte); }
+
+    .ba-composite { overflow: hidden; }
+    .ba-composite img { width: 100%; height: auto; display: block; }
+
+    .ba-info { padding: 22px 24px; }
+
+    .ba-info .ba-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .ba-info .ba-duration { font-size: 0.82rem; color: var(--accent-principal); font-weight: 600; margin-bottom: 6px; }
+    .ba-info .ba-desc { font-size: 0.88rem; color: var(--texte-secondaire); line-height: 1.6; margin-bottom: 8px; }
+
+    .ba-ebook-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .tag-ebook1 { background: rgba(124,140,94,0.12); color: var(--accent-principal); }
+    .tag-ebook2 { background: rgba(201,123,92,0.12); color: var(--accent-secondaire); }
 
     /* ========================================
-       4. SECTION NOS GUIDES — EBOOKS
+       5. SECTION EBOOKS
        ======================================== */
-    #guides {
-      background: var(--fond-principal);
-    }
+    #guides { background: var(--fond-secondaire); }
 
-    .ebooks-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
+    .ebooks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
 
     .ebook-card {
       background: var(--blanc);
@@ -480,43 +402,31 @@
       position: relative;
     }
 
-    .ebook-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--ombre-elevee);
-    }
+    .ebook-card:hover { transform: translateY(-5px); box-shadow: var(--ombre-elevee); }
 
     .ebook-badge {
       position: absolute;
-      top: 20px;
-      right: 20px;
-      padding: 6px 16px;
+      top: 18px; right: 18px;
+      padding: 5px 14px;
       border-radius: 50px;
-      font-family: 'Lora', serif;
-      font-size: 0.75rem;
-      font-weight: 600;
+      font-size: 0.7rem;
+      font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
       z-index: 2;
     }
 
-    .badge-bestseller {
-      background: var(--accent-secondaire);
-      color: var(--blanc);
-    }
+    .badge-bestseller { background: var(--accent-secondaire); color: var(--blanc); }
+    .badge-new { background: var(--accent-principal); color: var(--fond-principal); }
 
-    .badge-new {
-      background: var(--accent-principal);
-      color: var(--fond-principal);
-    }
-
-    /* Mockup 3D de la couverture — INTERACTIF */
+    /* Mockup 3D interactif */
     .ebook-mockup {
-      background: linear-gradient(135deg, var(--fond-secondaire) 0%, rgba(124,140,94,0.12) 100%);
-      padding: 50px 40px;
+      background: linear-gradient(135deg, var(--fond-secondaire) 0%, rgba(124,140,94,0.1) 100%);
+      padding: 44px 36px;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 360px;
+      min-height: 340px;
       position: relative;
       overflow: hidden;
       cursor: grab;
@@ -524,172 +434,73 @@
       user-select: none;
     }
 
-    .ebook-mockup:active {
-      cursor: grabbing;
-    }
+    .ebook-mockup:active { cursor: grabbing; }
 
-    .ebook-mockup::before {
-      content: '';
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      top: -50%;
-      left: -50%;
-      background: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 20px,
-        rgba(124,140,94,0.03) 20px,
-        rgba(124,140,94,0.03) 21px
-      );
-      pointer-events: none;
-    }
-
-    /* Indicateur tactile */
     .ebook-mockup .drag-hint {
       position: absolute;
-      bottom: 14px;
-      left: 50%;
+      bottom: 12px; left: 50%;
       transform: translateX(-50%);
-      font-family: 'Lora', serif;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       color: var(--texte-secondaire);
-      opacity: 0.6;
+      opacity: 0.5;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       z-index: 3;
       pointer-events: none;
       transition: opacity 0.5s ease;
     }
 
-    .ebook-mockup.dragged .drag-hint {
-      opacity: 0;
-    }
+    .ebook-mockup.dragged .drag-hint { opacity: 0; }
 
-    /* Scène 3D */
-    .book-scene {
-      perspective: 1200px;
-      width: 200px;
-      height: 280px;
-      position: relative;
-      z-index: 2;
-    }
+    .book-scene { perspective: 1200px; width: 190px; height: 270px; position: relative; z-index: 2; }
 
     .book-3d {
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       position: relative;
       transform-style: preserve-3d;
       transform: rotateY(-20deg) rotateX(4deg);
       transition: transform 0.1s ease-out;
     }
 
-    /* Couverture avant */
     .book-face {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       backface-visibility: hidden;
       border-radius: 4px 14px 14px 4px;
     }
 
     .book-front {
-      background: linear-gradient(145deg, var(--accent-principal) 0%, #5a6b42 100%);
-      box-shadow: 2px 2px 20px rgba(61,47,38,0.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 28px 20px;
       z-index: 3;
       transform: translateZ(12px);
+      box-shadow: 2px 2px 20px rgba(61,47,38,0.18);
     }
 
-    .book-front::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 10px;
-      height: 100%;
-      background: linear-gradient(to right, rgba(0,0,0,0.25), transparent);
-      border-radius: 4px 0 0 4px;
+    .book-front img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border-radius: 4px 14px 14px 4px;
     }
 
-    .book-front::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 8%;
-      width: 1px;
-      height: 84%;
-      background: rgba(255,255,255,0.08);
-    }
-
-    .book-front .book-icon {
-      font-size: 2.6rem;
-      margin-bottom: 14px;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-    }
-
-    .book-front .book-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 0.88rem;
-      color: var(--fond-principal);
-      text-align: center;
-      line-height: 1.35;
-      font-weight: 600;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.2);
-    }
-
-    .book-front .book-author {
-      font-family: 'Lora', serif;
-      font-size: 0.65rem;
-      color: rgba(245,241,234,0.7);
-      margin-top: 12px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-
-    /* Dos du livre (couverture arrière) */
     .book-back {
       background: linear-gradient(145deg, #4a5a36 0%, #3d4d2e 100%);
       transform: rotateY(180deg) translateZ(12px);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 30px 24px;
+      padding: 28px 20px;
     }
 
-    .book-back .back-content {
-      text-align: center;
-      color: rgba(245,241,234,0.8);
-    }
+    .book-back .back-content { text-align: center; color: rgba(245,241,234,0.8); }
+    .book-back .back-logo { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-weight: 700; color: var(--fond-principal); margin-bottom: 12px; }
+    .book-back .back-content p { font-size: 0.68rem; line-height: 1.6; color: rgba(245,241,234,0.6); }
 
-    .book-back .back-content .back-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--fond-principal);
-      margin-bottom: 14px;
-      letter-spacing: 1px;
-    }
+    .book-back-alt { background: linear-gradient(145deg, #8a5a44 0%, #7a4e3a 100%); }
 
-    .book-back .back-content p {
-      font-family: 'Lora', serif;
-      font-size: 0.7rem;
-      line-height: 1.6;
-      color: rgba(245,241,234,0.6);
-    }
-
-    /* Tranche du livre (spine) */
     .book-spine {
       position: absolute;
-      width: 24px;
-      height: 100%;
-      left: -12px;
-      top: 0;
+      width: 24px; height: 100%;
+      left: -12px; top: 0;
       background: linear-gradient(to right, #4a5a36, #5a6b42, #4a5a36);
       transform: rotateY(-90deg) translateZ(0px);
       transform-origin: right center;
@@ -701,8 +512,8 @@
 
     .book-spine span {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 0.55rem;
-      color: rgba(245,241,234,0.7);
+      font-size: 0.5rem;
+      color: rgba(245,241,234,0.6);
       writing-mode: vertical-lr;
       text-orientation: mixed;
       transform: rotate(180deg);
@@ -711,331 +522,177 @@
       white-space: nowrap;
     }
 
-    /* Pages visibles sur la tranche */
+    .book-spine-alt { background: linear-gradient(to right, #8a5a44, #a0604a, #8a5a44); }
+
     .book-pages {
       position: absolute;
-      width: 24px;
-      height: calc(100% - 12px);
-      right: -12px;
-      top: 6px;
-      transform: rotateY(90deg) translateZ(188px);
+      width: 24px; height: calc(100% - 12px);
+      right: -12px; top: 6px;
+      transform: rotateY(90deg) translateZ(178px);
       transform-origin: left center;
-      background: repeating-linear-gradient(
-        to bottom,
-        #f8f4ed 0px,
-        #f8f4ed 2px,
-        #ece7dc 2px,
-        #ece7dc 3px
-      );
+      background: repeating-linear-gradient(to bottom, #f8f4ed 0px, #f8f4ed 2px, #ece7dc 2px, #ece7dc 3px);
       border-radius: 0 2px 2px 0;
-      box-shadow: inset 2px 0 4px rgba(0,0,0,0.05);
     }
 
-    /* Haut du livre */
     .book-top {
       position: absolute;
-      width: 100%;
-      height: 24px;
-      top: -12px;
-      left: 0;
+      width: 100%; height: 24px;
+      top: -12px; left: 0;
       background: linear-gradient(to bottom, #ece7dc, #e0dbd0);
       transform: rotateX(90deg) translateZ(0px);
       transform-origin: bottom center;
-      border-radius: 2px;
     }
 
-    /* Bas du livre */
     .book-bottom {
       position: absolute;
-      width: 100%;
-      height: 24px;
-      bottom: -12px;
-      left: 0;
+      width: 100%; height: 24px;
+      bottom: -12px; left: 0;
       background: linear-gradient(to top, #ddd8cd, #e0dbd0);
       transform: rotateX(-90deg) translateZ(0px);
       transform-origin: top center;
-      border-radius: 2px;
     }
 
-    /* Variante terracotta pour l'ebook 2 */
-    .book-front-alt {
-      background: linear-gradient(145deg, var(--accent-secondaire) 0%, #a0604a 100%);
-    }
-
-    .book-front-alt::before {
-      background: linear-gradient(to right, rgba(0,0,0,0.2), transparent);
-    }
-
-    .book-back-alt {
-      background: linear-gradient(145deg, #8a5a44 0%, #7a4e3a 100%);
-    }
-
-    .book-spine-alt {
-      background: linear-gradient(to right, #8a5a44, #a0604a, #8a5a44);
-    }
-
-    /* Ombre au sol du livre */
     .book-shadow {
       position: absolute;
-      bottom: -30px;
-      left: 50%;
+      bottom: -28px; left: 50%;
       transform: translateX(-50%);
-      width: 160px;
-      height: 20px;
-      background: radial-gradient(ellipse, rgba(61,47,38,0.18) 0%, transparent 70%);
+      width: 150px; height: 18px;
+      background: radial-gradient(ellipse, rgba(61,47,38,0.16) 0%, transparent 70%);
       border-radius: 50%;
       z-index: 1;
       pointer-events: none;
     }
 
-    /* Contenu de la carte ebook */
-    .ebook-body {
-      padding: 36px;
+    /* Note étoiles */
+    .ebook-rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
     }
 
-    .ebook-body h3 {
-      font-size: 1.4rem;
-      margin-bottom: 6px;
-      line-height: 1.3;
-    }
+    .ebook-stars { color: var(--etoiles); font-size: 0.9rem; letter-spacing: 1px; }
+    .ebook-rating-text { font-size: 0.78rem; color: var(--texte-secondaire); }
 
-    .ebook-body .ebook-subtitle {
-      font-size: 0.95rem;
-      color: var(--accent-principal);
-      font-weight: 500;
-      margin-bottom: 16px;
-    }
+    /* Corps ebook */
+    .ebook-body { padding: 32px; }
 
-    .ebook-body .ebook-desc {
-      font-size: 0.95rem;
-      color: var(--texte-secondaire);
-      line-height: 1.7;
-      margin-bottom: 24px;
-    }
+    .ebook-body h3 { font-size: 1.35rem; margin-bottom: 6px; line-height: 1.3; }
+
+    .ebook-body .ebook-subtitle { font-size: 0.92rem; color: var(--accent-principal); font-weight: 600; margin-bottom: 14px; }
+
+    .ebook-body .ebook-desc { font-size: 0.92rem; color: var(--texte-secondaire); line-height: 1.7; margin-bottom: 22px; }
 
     .ebook-section-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 600;
       color: var(--texte-principal);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
-    .ebook-bullets {
-      list-style: none;
-      margin-bottom: 24px;
-    }
+    .ebook-bullets { list-style: none; margin-bottom: 22px; }
 
     .ebook-bullets li {
-      font-size: 0.9rem;
-      color: var(--texte-secondaire);
-      padding: 5px 0;
-      padding-left: 28px;
-      position: relative;
-      line-height: 1.5;
-    }
-
-    .ebook-bullets li::before {
-      content: '✅';
-      position: absolute;
-      left: 0;
-      font-size: 0.85rem;
-    }
-
-    .ebook-includes {
-      list-style: none;
-      margin-bottom: 28px;
-      background: var(--fond-principal);
-      padding: 20px;
-      border-radius: var(--radius);
-    }
-
-    .ebook-includes li {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--texte-secondaire);
       padding: 4px 0;
+      padding-left: 26px;
+      position: relative;
+      line-height: 1.55;
     }
 
-    .ebook-price-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
+    .ebook-bullets li::before { content: '✅'; position: absolute; left: 0; font-size: 0.8rem; }
+
+    /* Pour qui */
+    .ebook-pour-qui {
+      background: var(--fond-principal);
+      padding: 18px 20px;
+      border-radius: var(--radius);
+      margin-bottom: 22px;
+      font-size: 0.88rem;
+      color: var(--texte-secondaire);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* Prix */
+    .ebook-price-block { margin-bottom: 16px; }
+
+    .ebook-price-old {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--texte-secondaire);
+      text-decoration: line-through;
+      opacity: 0.5;
+      margin-right: 10px;
     }
 
     .ebook-price {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.6rem;
+      font-size: 2.8rem;
       font-weight: 700;
       color: var(--accent-principal);
     }
 
-    .ebook-price-old {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
-      font-weight: 500;
+    .ebook-price-sub { font-size: 0.78rem; color: var(--texte-secondaire); margin-top: 4px; }
+
+    .ebook-garantie {
+      font-size: 0.78rem;
       color: var(--texte-secondaire);
-      text-decoration: line-through;
-      opacity: 0.6;
-      margin-right: 8px;
+      margin-top: 12px;
+      text-align: center;
     }
 
-    .ebook-price-row .btn {
-      flex-shrink: 0;
-    }
+    /* Mini-témoignages dans la carte */
+    .mini-reviews { margin-top: 24px; padding-top: 22px; border-top: 1px solid var(--fond-secondaire); }
 
-    /* ========================================
-       5. SECTION AVANT / APRÈS
-       ======================================== */
-    #avant-apres {
-      background: var(--fond-secondaire);
-    }
-
-    .ba-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-    }
-
-    .ba-card {
-      background: var(--blanc);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--ombre-douce);
-    }
-
-    .ba-composite {
-      overflow: hidden;
-      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-    }
-
-    .ba-composite img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .ba-images {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-    }
-
-    .ba-img-wrap {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .ba-img-wrap img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-    }
-
-    .ba-label {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      padding: 4px 14px;
-      border-radius: 50px;
-      font-family: 'Lora', serif;
-      font-size: 0.7rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    .label-avant {
-      background: rgba(61,47,38,0.8);
-      color: var(--fond-principal);
-    }
-
-    .label-apres {
-      background: rgba(124,140,94,0.9);
-      color: var(--fond-principal);
-    }
-
-    .ba-info {
-      padding: 24px;
-    }
-
-    .ba-info .ba-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .ba-info .ba-duration {
+    .mini-review {
+      padding: 12px 0;
       font-size: 0.85rem;
-      color: var(--accent-principal);
-      font-weight: 500;
-      margin-bottom: 8px;
-    }
-
-    .ba-info .ba-desc {
-      font-size: 0.88rem;
       color: var(--texte-secondaire);
       line-height: 1.6;
-      margin-bottom: 8px;
     }
 
-    .ba-info .ba-ebook {
-      font-size: 0.78rem;
-      color: var(--dore);
-      font-style: italic;
-    }
+    .mini-review + .mini-review { border-top: 1px solid var(--fond-secondaire); }
+
+    .mini-review .mini-stars { color: var(--etoiles); font-size: 0.78rem; margin-bottom: 4px; }
+    .mini-review .mini-author { font-weight: 600; color: var(--texte-principal); margin-top: 6px; font-size: 0.8rem; }
 
     /* ========================================
-       6. SECTION TÉMOIGNAGES
+       6. TÉMOIGNAGES
        ======================================== */
-    #temoignages {
-      background: var(--fond-principal);
-    }
+    #temoignages { background: var(--fond-principal); }
 
-    .temoignages-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-    }
+    .temoignages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
     .temoignage-card {
       background: var(--blanc);
       border-radius: var(--radius-lg);
-      padding: 32px;
+      padding: 28px;
       box-shadow: var(--ombre-douce);
       transition: var(--transition);
       position: relative;
     }
 
-    .temoignage-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--ombre-carte);
-    }
+    .temoignage-card:hover { transform: translateY(-3px); box-shadow: var(--ombre-carte); }
 
     .temoignage-card::before {
-      content: '"';
+      content: '\201C';
       font-family: 'Cormorant Garamond', serif;
-      font-size: 4rem;
+      font-size: 3.5rem;
       color: var(--accent-principal);
-      opacity: 0.15;
+      opacity: 0.12;
       position: absolute;
-      top: 16px;
-      right: 24px;
+      top: 14px; right: 20px;
       line-height: 1;
     }
 
-    .temoignage-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 16px;
-    }
+    .temoignage-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
 
     .temoignage-avatar {
-      width: 56px;
-      height: 56px;
+      width: 52px; height: 52px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid var(--fond-secondaire);
@@ -1043,217 +700,108 @@
       flex-shrink: 0;
     }
 
-    img.temoignage-avatar {
-      display: block;
-    }
+    img.temoignage-avatar { display: block; }
 
-    .temoignage-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-
-    .temoignage-age {
-      font-size: 0.82rem;
-      color: var(--texte-secondaire);
-    }
-
-    .temoignage-stars {
-      color: var(--dore);
-      font-size: 0.9rem;
-      margin-bottom: 14px;
-      letter-spacing: 2px;
-    }
+    .temoignage-name { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; }
+    .temoignage-age { font-size: 0.78rem; color: var(--texte-secondaire); }
+    .temoignage-stars { color: var(--etoiles); font-size: 0.85rem; margin-bottom: 12px; letter-spacing: 2px; }
 
     .temoignage-text {
-      font-size: 0.92rem;
+      font-size: 0.88rem;
       color: var(--texte-secondaire);
       line-height: 1.7;
       font-style: italic;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .temoignage-badge {
       display: inline-block;
-      padding: 4px 12px;
+      padding: 3px 10px;
       border-radius: 50px;
-      font-size: 0.72rem;
-      letter-spacing: 0.5px;
-      background: var(--fond-secondaire);
-      color: var(--accent-principal);
-      font-weight: 500;
+      font-size: 0.68rem;
+      font-weight: 600;
     }
+
+    .badge-guide1 { background: rgba(124,140,94,0.12); color: var(--accent-principal); }
+    .badge-guide2 { background: rgba(201,123,92,0.12); color: var(--accent-secondaire); }
 
     /* ========================================
-       7. SECTION POURQUOI MUKENDI
+       7. POURQUOI MUKENDI
        ======================================== */
-    #pourquoi {
-      background: var(--fond-secondaire);
-    }
+    #pourquoi { background: var(--fond-secondaire); }
 
-    .piliers-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
-    }
+    .piliers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
 
     .pilier-card {
       text-align: center;
-      padding: 40px 24px;
+      padding: 36px 22px;
       background: var(--blanc);
       border-radius: var(--radius-lg);
       box-shadow: var(--ombre-douce);
       transition: var(--transition);
     }
 
-    .pilier-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--ombre-carte);
-    }
-
-    .pilier-icon {
-      font-size: 2.8rem;
-      margin-bottom: 20px;
-      display: block;
-    }
-
-    .pilier-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-    }
-
-    .pilier-card p {
-      font-size: 0.92rem;
-      color: var(--texte-secondaire);
-      line-height: 1.6;
-    }
+    .pilier-card:hover { transform: translateY(-3px); box-shadow: var(--ombre-carte); }
+    .pilier-icon { font-size: 2.6rem; margin-bottom: 18px; display: block; }
+    .pilier-card h3 { font-size: 1.15rem; margin-bottom: 10px; }
+    .pilier-card p { font-size: 0.88rem; color: var(--texte-secondaire); line-height: 1.6; }
 
     /* ========================================
-       8. SECTION À PROPOS — DR MUKENDI
+       8. À PROPOS DR MUKENDI
        ======================================== */
-    #a-propos {
-      background: var(--fond-principal);
-    }
+    #dr-mukendi { background: var(--fond-principal); }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .about-photo {
-      position: relative;
-    }
+    .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 50px; align-items: center; }
 
     .about-photo-placeholder {
-      width: 100%;
-      max-width: 400px;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--fond-secondaire) 0%, rgba(124,140,94,0.12) 100%);
-      border: 4px solid var(--dore);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      margin: 0 auto;
+      width: 100%; max-width: 360px;
+      aspect-ratio: 3/4;
+      border-radius: var(--radius-lg);
       overflow: hidden;
+      border: 3px solid var(--dore);
+      margin: 0 auto;
       box-shadow: var(--ombre-carte);
     }
 
-    .about-photo-placeholder .placeholder-text {
-      font-family: 'Cormorant Garamond', serif;
-      color: var(--texte-secondaire);
-      font-size: 1rem;
-      text-align: center;
-      padding: 20px;
-    }
+    .about-photo-placeholder img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 
-    .about-photo-placeholder .placeholder-icon {
-      font-size: 4rem;
-      margin-bottom: 8px;
-    }
+    .about-content .about-role { font-size: 0.95rem; color: var(--accent-principal); font-weight: 500; font-style: italic; margin-bottom: 22px; }
 
-    .about-content .section-label {
-      text-align: left;
-    }
+    .about-content .about-bio { font-size: 0.95rem; color: var(--texte-secondaire); line-height: 1.8; margin-bottom: 12px; }
 
-    .about-content h2 {
-      margin-bottom: 8px;
-    }
-
-    .about-content .about-role {
-      font-size: 1rem;
-      color: var(--accent-principal);
-      font-weight: 500;
-      margin-bottom: 24px;
-    }
-
-    .about-content .about-bio {
-      font-size: 1rem;
-      color: var(--texte-secondaire);
-      line-height: 1.8;
-      margin-bottom: 28px;
-    }
-
-    .credentials-list {
-      list-style: none;
-    }
+    .credentials-list { list-style: none; margin-top: 20px; }
 
     .credentials-list li {
-      padding: 6px 0;
-      padding-left: 28px;
+      padding: 5px 0 5px 26px;
       position: relative;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: var(--texte-secondaire);
     }
 
-    .credentials-list li::before {
-      content: '•';
-      position: absolute;
-      left: 8px;
-      color: var(--dore);
-      font-size: 1.4rem;
-      line-height: 1.4;
-    }
+    .credentials-list li::before { content: '•'; position: absolute; left: 8px; color: var(--dore); font-size: 1.3rem; line-height: 1.5; }
 
     /* ========================================
-       9. SECTION STATISTIQUES
+       9. STATISTIQUES
        ======================================== */
-    .stats-section {
-      background: var(--accent-principal);
-      padding: 70px 0;
-    }
+    .stats-section { background: var(--accent-principal); padding: 65px 0; }
 
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
-      text-align: center;
-    }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; text-align: center; }
 
-    .stat-item .stat-number {
+    .stat-number {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
       font-weight: 700;
       color: var(--fond-principal);
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
-    .stat-item .stat-label {
-      font-family: 'Lora', serif;
-      font-size: 0.9rem;
-      color: rgba(245,241,234,0.8);
-    }
+    .stat-label { font-size: 0.85rem; color: rgba(245,241,234,0.75); }
 
     /* ========================================
-       10. SECTION VIDÉO YOUTUBE
+       10. VIDÉO
        ======================================== */
-    #video {
-      background: var(--fond-secondaire);
-    }
+    #video { background: var(--fond-secondaire); }
 
     .video-wrapper {
       max-width: 800px;
@@ -1264,61 +812,34 @@
       aspect-ratio: 16 / 9;
     }
 
-    .video-wrapper iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+    .video-wrapper iframe { width: 100%; height: 100%; border: none; }
+
+    .video-cta { text-align: center; margin-top: 28px; font-size: 0.9rem; color: var(--texte-secondaire); }
 
     /* ========================================
-       11. SECTION GARANTIE
+       11. GARANTIE
        ======================================== */
     .garantie-section {
-      background: var(--fond-principal);
+      background: var(--fond-secondaire);
       padding: 70px 0;
-      border-top: 1px solid rgba(184,164,124,0.15);
-      border-bottom: 1px solid rgba(184,164,124,0.15);
     }
 
-    .garantie-content {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .garantie-icon {
-      font-size: 3.5rem;
-      color: var(--dore);
-      margin-bottom: 20px;
-      display: block;
-    }
-
-    .garantie-content h2 {
-      margin-bottom: 16px;
-    }
-
-    .garantie-content p {
-      font-size: 1rem;
-      color: var(--texte-secondaire);
-      line-height: 1.7;
-    }
+    .garantie-content { text-align: center; max-width: 650px; margin: 0 auto; }
+    .garantie-icon { font-size: 3.5rem; color: var(--dore); margin-bottom: 18px; display: block; }
+    .garantie-content h2 { margin-bottom: 14px; }
+    .garantie-content p { font-size: 0.95rem; color: var(--texte-secondaire); line-height: 1.7; margin-bottom: 20px; }
 
     /* ========================================
-       12. SECTION FAQ
+       12. FAQ
        ======================================== */
-    #faq {
-      background: var(--fond-secondaire);
-    }
+    #faq { background: var(--fond-principal); }
 
-    .faq-list {
-      max-width: 800px;
-      margin: 0 auto;
-    }
+    .faq-list { max-width: 800px; margin: 0 auto; }
 
     .faq-item {
       background: var(--blanc);
       border-radius: var(--radius);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       overflow: hidden;
       box-shadow: var(--ombre-douce);
     }
@@ -1327,175 +848,98 @@
       width: 100%;
       background: none;
       border: none;
-      padding: 22px 28px;
+      padding: 20px 24px;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 600;
       color: var(--texte-principal);
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 14px;
       text-align: left;
       transition: var(--transition);
     }
 
-    .faq-question:hover {
-      color: var(--accent-principal);
-    }
+    .faq-question:hover { color: var(--accent-principal); }
 
-    .faq-question .faq-arrow {
-      font-size: 1.2rem;
-      transition: var(--transition);
-      flex-shrink: 0;
-      color: var(--accent-principal);
-    }
+    .faq-arrow { font-size: 1.1rem; transition: var(--transition); flex-shrink: 0; color: var(--accent-principal); }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
 
-    .faq-item.open .faq-arrow {
-      transform: rotate(180deg);
-    }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
 
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-    }
-
-    .faq-answer-inner {
-      padding: 0 28px 22px;
-      font-size: 0.95rem;
-      color: var(--texte-secondaire);
-      line-height: 1.7;
-    }
+    .faq-answer-inner { padding: 0 24px 20px; font-size: 0.92rem; color: var(--texte-secondaire); line-height: 1.7; }
 
     /* ========================================
-       13. SECTION CTA FINAL
+       13. CTA FINAL
        ======================================== */
-    .cta-final {
-      background: var(--accent-principal);
-      padding: 90px 0;
-      text-align: center;
+    .cta-final { background: var(--accent-principal); padding: 90px 0; text-align: center; }
+    .cta-final h2 { color: var(--fond-principal); margin-bottom: 14px; }
+    .cta-final .section-subtitle { color: rgba(245,241,234,0.8); margin-bottom: 32px; }
+
+    .cta-final-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 18px; }
+
+    .btn-cta-final {
+      background: var(--accent-secondaire);
+      color: var(--blanc);
+      border: none;
+      padding: 18px 36px;
+      border-radius: 50px;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      min-height: 52px;
     }
 
-    .cta-final h2 {
-      color: var(--fond-principal);
-      margin-bottom: 16px;
-    }
+    .btn-cta-final:hover { background: var(--accent-secondaire-hover); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(201,123,92,0.35); }
 
-    .cta-final .section-subtitle {
-      color: rgba(245,241,234,0.8);
-      margin-bottom: 36px;
-    }
+    .cta-final-trust { font-size: 0.82rem; color: rgba(245,241,234,0.65); }
 
     /* ========================================
        14. FOOTER
        ======================================== */
-    .site-footer {
-      background: var(--texte-principal);
-      color: rgba(245,241,234,0.7);
-      padding: 70px 0 32px;
-    }
+    .site-footer { background: var(--fond-fonce); color: rgba(245,241,234,0.7); padding: 65px 0 28px; }
 
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 48px;
-    }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 36px; margin-bottom: 40px; }
 
-    .footer-brand .logo {
-      color: var(--fond-principal);
-      margin-bottom: 14px;
-      display: block;
-    }
+    .footer-brand .logo { color: var(--fond-principal); margin-bottom: 12px; display: block; }
+    .footer-tagline { font-size: 0.85rem; color: rgba(245,241,234,0.5); line-height: 1.6; }
 
-    .footer-brand .footer-tagline {
-      font-size: 0.9rem;
-      color: rgba(245,241,234,0.6);
-      line-height: 1.6;
-    }
+    .footer-col h4 { font-family: 'Cormorant Garamond', serif; color: var(--fond-principal); font-size: 1.05rem; margin-bottom: 16px; font-weight: 600; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul a { font-size: 0.84rem; color: rgba(245,241,234,0.55); transition: var(--transition); }
+    .footer-col ul a:hover { color: var(--accent-principal); }
 
-    .footer-col h4 {
-      font-family: 'Cormorant Garamond', serif;
-      color: var(--fond-principal);
-      font-size: 1.1rem;
-      margin-bottom: 18px;
-      font-weight: 600;
-    }
-
-    .footer-col ul {
-      list-style: none;
-    }
-
-    .footer-col ul li {
-      margin-bottom: 10px;
-    }
-
-    .footer-col ul a {
-      font-size: 0.88rem;
-      color: rgba(245,241,234,0.6);
-      transition: var(--transition);
-    }
-
-    .footer-col ul a:hover {
-      color: var(--accent-principal);
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 16px;
-      margin-top: 16px;
-    }
+    .footer-social { display: flex; gap: 12px; margin-top: 14px; }
 
     .footer-social a {
-      width: 40px;
-      height: 40px;
+      width: 36px; height: 36px;
       border-radius: 50%;
-      border: 1px solid rgba(245,241,234,0.2);
+      border: 1px solid rgba(245,241,234,0.18);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.1rem;
+      font-size: 1rem;
       transition: var(--transition);
     }
 
-    .footer-social a:hover {
-      background: var(--accent-principal);
-      border-color: var(--accent-principal);
-    }
+    .footer-social a:hover { background: var(--accent-principal); border-color: var(--accent-principal); }
 
-    .footer-bottom {
-      border-top: 1px solid rgba(245,241,234,0.1);
-      padding-top: 24px;
-      text-align: center;
-    }
-
-    .footer-bottom p {
-      font-size: 0.8rem;
-      color: rgba(245,241,234,0.4);
-      line-height: 1.7;
-    }
+    .footer-bottom { border-top: 1px solid rgba(245,241,234,0.08); padding-top: 20px; text-align: center; }
+    .footer-bottom p { font-size: 0.76rem; color: rgba(245,241,234,0.35); line-height: 1.7; }
 
     /* ========================================
-       ANIMATIONS — FADE IN AU SCROLL
+       ANIMATIONS
        ======================================== */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Délais échelonnés pour les grilles */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
 
     /* ========================================
        RESPONSIVE — TABLETTE
@@ -1503,35 +947,20 @@
     @media (max-width: 1024px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
+      .hero-grid { grid-template-columns: 1fr; gap: 36px; }
       .hero-content { padding-right: 0; text-align: center; }
-      .hero-description { margin: 0 auto 36px; }
+      .hero-description { margin: 0 auto 32px; }
       .hero-buttons { justify-content: center; }
-      .hero-image img { height: 450px; }
-
+      .hero-trust { text-align: center; }
+      .hero-image img { height: 420px; }
       .ebooks-grid { grid-template-columns: 1fr; }
       .ba-grid { grid-template-columns: 1fr 1fr; }
       .temoignages-grid { grid-template-columns: 1fr 1fr; }
       .piliers-grid { grid-template-columns: 1fr 1fr; }
-      .stats-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-      }
-
-      .about-content .section-label { text-align: center; }
-      .about-photo-placeholder { max-width: 300px; }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .about-grid { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+      .about-photo-placeholder { max-width: 280px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
     }
 
     /* ========================================
@@ -1539,30 +968,21 @@
        ======================================== */
     @media (max-width: 640px) {
       section { padding: 70px 0; }
-
-      .hero { min-height: auto; padding-top: 100px; padding-bottom: 40px; }
-      .hero-image img { height: 350px; }
+      .hero { min-height: auto; padding-top: 90px; padding-bottom: 30px; }
+      .hero-image img { height: 320px; }
       .hero-buttons { flex-direction: column; align-items: stretch; }
-
-      .trust-items { flex-direction: column; align-items: center; gap: 12px; }
-
+      .trust-items { flex-direction: column; align-items: center; gap: 10px; }
       .ba-grid { grid-template-columns: 1fr; }
-      .ba-img-wrap img { height: 200px; }
-
       .temoignages-grid { grid-template-columns: 1fr; }
       .piliers-grid { grid-template-columns: 1fr; }
-      .stats-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
-
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
       .footer-grid { grid-template-columns: 1fr; text-align: center; }
       .footer-social { justify-content: center; }
-
       .ebook-body { padding: 24px; }
-      .ebook-price-row { flex-direction: column; align-items: flex-start; }
-
-      .book-3d { width: 140px; height: 200px; }
-      .book-scene { width: 160px; height: 220px; }
-      .ebook-mockup { padding: 40px 20px; min-height: 280px; }
-      .book-pages { transform: rotateY(90deg) translateZ(148px); }
+      .book-scene { width: 150px; height: 210px; }
+      .ebook-mockup { padding: 36px 20px; min-height: 270px; }
+      .book-pages { transform: rotateY(90deg) translateZ(138px); }
+      .cta-final-buttons { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
@@ -1570,93 +990,60 @@
 <body>
 
   <!-- ============================================
-       1. HEADER — NAVIGATION STICKY
+       1. HEADER
        ============================================ -->
   <header class="site-header" id="header">
     <div class="container header-inner">
       <a href="#" class="logo">Mukendi <span>Skin Care</span></a>
-
       <nav>
         <ul class="nav-links">
           <li><a href="#hero">Accueil</a></li>
           <li><a href="#guides">Nos Guides</a></li>
+          <li><a href="#transformations">Transformations</a></li>
           <li><a href="#temoignages">Témoignages</a></li>
-          <li><a href="#avant-apres">Avant/Après</a></li>
-          <li><a href="#a-propos">À Propos</a></li>
+          <li><a href="#dr-mukendi">Dr Mukendi</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><span class="cart-icon" aria-label="Panier">🛒</span></li>
         </ul>
       </nav>
-
-      <button class="hamburger" id="hamburger" aria-label="Menu de navigation">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- Menu mobile -->
   <div class="mobile-nav" id="mobile-nav">
     <a href="#hero" class="mobile-link">Accueil</a>
     <a href="#guides" class="mobile-link">Nos Guides</a>
+    <a href="#transformations" class="mobile-link">Transformations</a>
     <a href="#temoignages" class="mobile-link">Témoignages</a>
-    <a href="#avant-apres" class="mobile-link">Avant/Après</a>
-    <a href="#a-propos" class="mobile-link">À Propos</a>
+    <a href="#dr-mukendi" class="mobile-link">Dr Mukendi</a>
     <a href="#faq" class="mobile-link">FAQ</a>
   </div>
 
 
   <!-- ============================================
-       2. HERO SECTION
+       2. HERO
        ============================================ -->
   <section class="hero" id="hero">
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content reveal">
-          <span class="section-label">Soins Naturels Premium</span>
+          <span class="section-label">✦ Soins Naturels pour Femmes de 45 Ans et Plus</span>
           <h1>Révélez l'Éclat Naturel de Votre Peau</h1>
           <p class="hero-description">
-            Des guides experts du Dr Mukendi pour transformer votre peau après 45 ans avec des ingrédients 100% naturels que vous avez déjà chez vous.
+            Des guides experts du Dr Mukendi pour transformer votre peau avec des ingrédients 100% naturels que vous avez déjà chez vous. Sans chirurgie. Sans crèmes coûteuses. Juste 10 minutes par jour.
           </p>
           <div class="hero-buttons">
-            <a href="#guides" class="btn btn-primary">Découvrir nos guides</a>
-            <a href="#avant-apres" class="btn btn-secondary">Voir les transformations</a>
+            <a href="#guides" class="btn btn-primary">Je découvre les guides →</a>
+            <a href="#transformations" class="btn btn-secondary">Voir les transformations</a>
           </div>
+          <p class="hero-trust">✓ Téléchargement instantané · ✓ Garantie 30 jours · ✓ +5000 femmes satisfaites</p>
         </div>
 
         <div class="hero-image reveal reveal-delay-2">
-          <img
-            src="images/hero-femme.png"
-            alt="Femme mature avec une belle peau naturelle et lumineuse"
-            loading="eager"
-          >
-          <div class="leaf-deco"></div>
+          <!-- IMAGE : Photo hero femme mature -->
+          <img src="images/hero-femme.png" alt="Femme mature avec une belle peau naturelle et lumineuse" loading="eager">
         </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================
-       SECTION VIDÉO — PRÉSENTATION (juste après le hero)
-       ============================================ -->
-  <section id="video" style="padding: 80px 0 60px;">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Présentation</span>
-        <h2>Découvrez la Méthode Dr Mukendi</h2>
-        <p class="section-subtitle">Regardez cette courte vidéo de présentation</p>
-      </div>
-      <div class="video-wrapper reveal">
-        <!-- Remplacer l'URL ci-dessous par votre vraie vidéo YouTube -->
-        <iframe
-          src="https://www.youtube.com/embed/wkySzo-bFOQ"
-          title="Présentation Dr Mukendi"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy"
-        ></iframe>
       </div>
     </div>
   </section>
@@ -1668,147 +1055,27 @@
   <div class="trust-bar">
     <div class="container">
       <div class="trust-items">
-        <span class="trust-item"><span class="check">✓</span> +5000 femmes accompagnées</span>
-        <span class="trust-item"><span class="check">✓</span> Méthodes 100% naturelles</span>
-        <span class="trust-item"><span class="check">✓</span> Téléchargement instantané PDF</span>
-        <span class="trust-item"><span class="check">✓</span> Garantie 30 jours satisfait ou remboursé</span>
+        <span class="trust-item">🌿 100% Naturel</span>
+        <span class="trust-item">👩‍⚕️ Validé par un Médecin</span>
+        <span class="trust-item">📥 Téléchargement Instantané</span>
+        <span class="trust-item">🛡️ Garantie 30 Jours</span>
       </div>
     </div>
   </div>
 
 
   <!-- ============================================
-       4. SECTION NOS GUIDES — EBOOKS
+       4. AVANT / APRÈS
        ============================================ -->
-  <section id="guides">
+  <section id="transformations">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-label">Nos Guides Experts</span>
-        <h2>Des Solutions Naturelles Éprouvées pour Transformer Votre Peau</h2>
-        <p class="section-subtitle">Découvrez nos programmes complets conçus par le Dr Mukendi</p>
-      </div>
-
-      <div class="ebooks-grid">
-
-        <!-- EBOOK 1 — Anti-âge -->
-        <div class="ebook-card reveal">
-          <span class="ebook-badge badge-bestseller">Best-seller</span>
-          <div class="ebook-mockup" data-book="1">
-            <div class="book-scene">
-              <div class="book-3d">
-                <div class="book-face book-front" style="padding: 0; background: none;">
-                  <img src="images/couverture-ebook1.png" alt="Couverture — Comment Rester Jeune" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px 14px 14px 4px;">
-                </div>
-                <div class="book-face book-back">
-                  <div class="back-content">
-                    <p class="back-logo">Mukendi Skin Care</p>
-                    <p>Le programme anti-âge naturel de 30 jours — Exercices faciaux, masques maison et routine complète</p>
-                  </div>
-                </div>
-                <div class="book-spine">
-                  <span>Dr Mukendi — Rester Jeune</span>
-                </div>
-                <div class="book-pages"></div>
-                <div class="book-top"></div>
-                <div class="book-bottom"></div>
-              </div>
-              <div class="book-shadow"></div>
-            </div>
-            <span class="drag-hint">↔ Glissez pour tourner</span>
-          </div>
-          <div class="ebook-body">
-            <h3>Comment Rester Jeune Pratiquement Pour Toujours (Sans Vraiment Essayer)</h3>
-            <p class="ebook-subtitle">Le programme anti-âge naturel de 30 jours</p>
-            <p class="ebook-desc">
-              Vous remarquez que votre visage a changé ? Les rides du front qui se creusent, les joues qui s'affaissent, ce double menton qui n'existait pas avant... Vous n'êtes pas seule. Et surtout : ce n'est PAS une fatalité.
-            </p>
-
-            <p class="ebook-section-title">Ce que vous allez découvrir</p>
-            <ul class="ebook-bullets">
-              <li>15 exercices faciaux validés scientifiquement (étude Northwestern)</li>
-              <li>Programme progressif sur 4 semaines (front, joues, lèvres, cou)</li>
-              <li>5 masques maison 100% naturels avec photos</li>
-              <li>Routine quotidienne de 10 minutes seulement</li>
-              <li>Planning + aliments anti-âge + erreurs à éviter</li>
-            </ul>
-
-            <div class="ebook-price-row">
-              <span class="ebook-price-old">9,99€</span>
-              <span class="ebook-price">3€</span>
-              <a href="https://pagczbja.mychariow.shop/prd_1pejkn/checkout" class="btn btn-primary" target="_blank" rel="noopener">Obtenir ce guide</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- EBOOK 2 — Taches, cicatrices, cernes -->
-        <div class="ebook-card reveal reveal-delay-2">
-          <span class="ebook-badge badge-new">Nouveau</span>
-          <div class="ebook-mockup" data-book="2">
-            <div class="book-scene">
-              <div class="book-3d">
-                <div class="book-face book-front book-front-alt" style="padding: 0; background: none;">
-                  <img src="images/couverture-ebook2.png" alt="Couverture — Comment Effacer Taches" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px 14px 14px 4px;">
-                </div>
-                <div class="book-face book-back book-back-alt">
-                  <div class="back-content">
-                    <p class="back-logo">Mukendi Skin Care</p>
-                    <p>Remèdes naturels pour une peau nette et lumineuse — Recettes, routines et techniques éprouvées</p>
-                  </div>
-                </div>
-                <div class="book-spine book-spine-alt">
-                  <span>Dr Mukendi — Taches &amp; Cernes</span>
-                </div>
-                <div class="book-pages"></div>
-                <div class="book-top"></div>
-                <div class="book-bottom"></div>
-              </div>
-              <div class="book-shadow"></div>
-            </div>
-            <span class="drag-hint">↔ Glissez pour tourner</span>
-          </div>
-          <div class="ebook-body">
-            <h3>Comment Effacer Taches, Cicatrices et Cernes Naturellement (Sans Dépenser une Fortune)</h3>
-            <p class="ebook-subtitle">Retrouvez une peau nette et lumineuse</p>
-            <p class="ebook-desc">
-              Découvrez les remèdes naturels simples pour effacer taches, cicatrices et cernes — et retrouver une peau nette sans vous ruiner. Des solutions accessibles, des résultats visibles, sans produits chimiques agressifs.
-            </p>
-
-            <p class="ebook-section-title">Ce que vous allez découvrir</p>
-            <ul class="ebook-bullets">
-              <li>Remèdes naturels ciblés contre les taches brunes</li>
-              <li>Solutions efficaces pour atténuer les cicatrices</li>
-              <li>Techniques anti-cernes avec ingrédients de cuisine</li>
-              <li>Routine éclat pour un teint uniforme</li>
-              <li>Erreurs à éviter qui aggravent les problèmes de peau</li>
-            </ul>
-
-            <div class="ebook-price-row">
-              <span class="ebook-price-old">12€</span>
-              <span class="ebook-price">3€</span>
-              <a href="https://pagczbja.mychariow.shop/prd_c2swq7/checkout" class="btn btn-primary" target="_blank" rel="noopener">Obtenir ce guide</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================
-       5. SECTION AVANT / APRÈS
-       ============================================ -->
-  <section id="avant-apres">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Des Transformations Réelles</span>
-        <h2>Voyez les Résultats Obtenus par Nos Lectrices</h2>
-        <p class="section-subtitle">Grâce aux méthodes naturelles du Dr Mukendi</p>
+        <span class="section-label">Résultats Réels</span>
+        <h2>Des Transformations Qui Parlent d'Elles-Mêmes</h2>
+        <p class="section-subtitle">Découvrez les résultats obtenus par nos lectrices grâce aux méthodes naturelles du Dr Mukendi</p>
       </div>
 
       <div class="ba-grid">
-
-        <!-- Transformation 1 — Martine -->
         <div class="ba-card reveal">
           <div class="ba-composite">
             <img src="images/ba-martine.png" alt="Avant/Après — Martine, 58 ans" loading="lazy">
@@ -1816,12 +1083,11 @@
           <div class="ba-info">
             <p class="ba-name">Martine, 58 ans</p>
             <p class="ba-duration">Après 6 semaines</p>
-            <p class="ba-desc">Réduction visible des rides du front et ovale du visage nettement plus ferme grâce aux exercices faciaux quotidiens.</p>
-            <p class="ba-ebook">Guide : « Comment Rester Jeune Pratiquement Pour Toujours »</p>
+            <p class="ba-desc">Rides du front visiblement atténuées, ovale du visage redéfini. Elle a suivi le programme d'exercices faciaux 10 min/jour.</p>
+            <span class="ba-ebook-tag tag-ebook1">Guide Anti-Âge</span>
           </div>
         </div>
 
-        <!-- Transformation 2 — Christine -->
         <div class="ba-card reveal reveal-delay-1">
           <div class="ba-composite">
             <img src="images/ba-christine.png" alt="Avant/Après — Christine, 64 ans" loading="lazy">
@@ -1829,34 +1095,195 @@
           <div class="ba-info">
             <p class="ba-name">Christine, 64 ans</p>
             <p class="ba-duration">Après 8 semaines</p>
-            <p class="ba-desc">Taches brunes sur le visage considérablement atténuées avec les remèdes naturels au curcuma et au citron.</p>
-            <p class="ba-ebook">Guide : « Comment Effacer Taches, Cicatrices et Cernes »</p>
+            <p class="ba-desc">Taches brunes sur les joues et le front nettement estompées grâce aux masques naturels au curcuma et citron.</p>
+            <span class="ba-ebook-tag tag-ebook2">Guide Taches & Cernes</span>
           </div>
         </div>
 
-        <!-- Transformation 3 — Sylvie -->
         <div class="ba-card reveal reveal-delay-2">
           <div class="ba-composite">
             <img src="images/ba-sylvie.png" alt="Avant/Après — Sylvie, 52 ans" loading="lazy">
           </div>
           <div class="ba-info">
             <p class="ba-name">Sylvie, 52 ans</p>
-            <p class="ba-duration">Après 5 semaines</p>
-            <p class="ba-desc">Double menton nettement réduit et mâchoire mieux définie grâce au programme progressif d'exercices du cou.</p>
-            <p class="ba-ebook">Guide : « Comment Rester Jeune Pratiquement Pour Toujours »</p>
+            <p class="ba-duration">Après 4 semaines</p>
+            <p class="ba-desc">Double menton réduit et mâchoire plus définie après le programme ciblé cou et menton.</p>
+            <span class="ba-ebook-tag tag-ebook1">Guide Anti-Âge</span>
           </div>
         </div>
 
-        <!-- Transformation 4 — Brigitte -->
         <div class="ba-card reveal reveal-delay-3">
           <div class="ba-composite">
             <img src="images/ba-brigitte.png" alt="Avant/Après — Brigitte, 67 ans" loading="lazy">
           </div>
           <div class="ba-info">
             <p class="ba-name">Brigitte, 67 ans</p>
-            <p class="ba-duration">Après 8 semaines</p>
-            <p class="ba-desc">Cernes considérablement éclaircis et teint beaucoup plus lumineux grâce aux compresses naturelles et à la routine éclat.</p>
-            <p class="ba-ebook">Guide : « Comment Effacer Taches, Cicatrices et Cernes »</p>
+            <p class="ba-duration">Après 5 semaines</p>
+            <p class="ba-desc">Cernes atténués et teint plus lumineux. Elle utilise la routine éclat quotidienne du guide.</p>
+            <span class="ba-ebook-tag tag-ebook2">Guide Taches & Cernes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       5. NOS GUIDES — EBOOKS
+       ============================================ -->
+  <section id="guides">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Nos Guides Experts</span>
+        <h2>Choisissez Votre Transformation</h2>
+        <p class="section-subtitle">Des solutions naturelles éprouvées, à petit prix, avec des résultats visibles dès 2 semaines</p>
+      </div>
+
+      <div class="ebooks-grid">
+
+        <!-- EBOOK 1 -->
+        <div class="ebook-card reveal">
+          <span class="ebook-badge badge-bestseller">Best-seller</span>
+          <div class="ebook-mockup" data-book="1">
+            <div class="book-scene">
+              <div class="book-3d">
+                <div class="book-face book-front">
+                  <img src="images/couverture-ebook1.png" alt="Couverture — Comment Rester Jeune">
+                </div>
+                <div class="book-face book-back">
+                  <div class="back-content">
+                    <p class="back-logo">Mukendi Skin Care</p>
+                    <p>Le programme anti-âge naturel de 30 jours — Exercices faciaux, masques maison et routine complète</p>
+                  </div>
+                </div>
+                <div class="book-spine"><span>Dr Mukendi — Rester Jeune</span></div>
+                <div class="book-pages"></div>
+                <div class="book-top"></div>
+                <div class="book-bottom"></div>
+              </div>
+              <div class="book-shadow"></div>
+            </div>
+            <span class="drag-hint">↔ Glissez pour tourner</span>
+          </div>
+
+          <div class="ebook-body">
+            <div class="ebook-rating">
+              <span class="ebook-stars">★★★★★</span>
+              <span class="ebook-rating-text">4.9/5 — 847 avis</span>
+            </div>
+            <h3>Comment Rester Jeune Pratiquement Pour Toujours (Sans Vraiment Essayer)</h3>
+            <p class="ebook-subtitle">Le programme anti-âge naturel de 30 jours</p>
+            <p class="ebook-desc">
+              Vous remarquez que votre visage a changé ? Les rides du front qui se creusent. Les joues qui s'affaissent. Ce double menton qui n'existait pas avant. L'ovale du visage qui perd sa définition... Vous n'êtes pas seule. Et surtout : ce n'est PAS une fatalité.
+            </p>
+
+            <p class="ebook-section-title">Ce que vous allez découvrir</p>
+            <ul class="ebook-bullets">
+              <li>15 exercices faciaux illustrés — validés par une étude de l'Université Northwestern</li>
+              <li>Programme progressif sur 4 semaines : front → joues → lèvres → cou</li>
+              <li>5 masques maison 100% naturels avec photos de préparation</li>
+              <li>Routine quotidienne de seulement 10 minutes</li>
+              <li>Planning semaine type + aliments anti-âge + erreurs à éviter</li>
+            </ul>
+
+            <div class="ebook-pour-qui">
+              Ce guide est fait pour vous si vous voyez votre visage changer et ça vous affecte. Vous ne voulez pas de chirurgie ni d'injections. Vous préférez les solutions naturelles avec des résultats visibles.
+            </div>
+
+            <div class="ebook-price-block">
+              <span class="ebook-price-old">99€</span>
+              <span class="ebook-price">17€</span>
+              <p class="ebook-price-sub">Accès immédiat · PDF téléchargeable</p>
+            </div>
+
+            <a href="https://pagczbja.mychariow.shop/prd_1pejkn/checkout" class="btn btn-cta" target="_blank" rel="noopener">Je veux rajeunir naturellement — 17 €</a>
+            <p class="ebook-garantie">🛡️ Garantie 30 jours satisfait ou remboursé</p>
+
+            <div class="mini-reviews">
+              <div class="mini-review">
+                <div class="mini-stars">★★★★★</div>
+                « En 3 semaines, mes rides du front se sont vraiment atténuées. Je n'en reviens pas. Merci Dr Mukendi ! »
+                <div class="mini-author">— Monique, 55 ans</div>
+              </div>
+              <div class="mini-review">
+                <div class="mini-stars">★★★★★</div>
+                « Les exercices faciaux sont si simples ! 10 minutes le matin et je vois la différence sur mon ovale. »
+                <div class="mini-author">— Françoise, 61 ans</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EBOOK 2 -->
+        <div class="ebook-card reveal reveal-delay-2">
+          <span class="ebook-badge badge-new">Nouveau</span>
+          <div class="ebook-mockup" data-book="2">
+            <div class="book-scene">
+              <div class="book-3d">
+                <div class="book-face book-front">
+                  <img src="images/couverture-ebook2.png" alt="Couverture — Comment Effacer Taches">
+                </div>
+                <div class="book-face book-back book-back-alt">
+                  <div class="back-content">
+                    <p class="back-logo">Mukendi Skin Care</p>
+                    <p>Remèdes naturels pour une peau nette et lumineuse — Recettes, routines et techniques éprouvées</p>
+                  </div>
+                </div>
+                <div class="book-spine book-spine-alt"><span>Dr Mukendi — Taches &amp; Cernes</span></div>
+                <div class="book-pages"></div>
+                <div class="book-top"></div>
+                <div class="book-bottom"></div>
+              </div>
+              <div class="book-shadow"></div>
+            </div>
+            <span class="drag-hint">↔ Glissez pour tourner</span>
+          </div>
+
+          <div class="ebook-body">
+            <div class="ebook-rating">
+              <span class="ebook-stars">★★★★★</span>
+              <span class="ebook-rating-text">4.8/5 — 612 avis</span>
+            </div>
+            <h3>Comment Effacer Taches, Cicatrices et Cernes Naturellement (Sans Dépenser une Fortune)</h3>
+            <p class="ebook-subtitle">Retrouvez une peau nette et lumineuse</p>
+            <p class="ebook-desc">
+              Ces taches brunes qui s'accumulent. Ces cicatrices qui ne partent pas. Ces cernes qui vous donnent l'air fatiguée même après une bonne nuit de sommeil... Vous avez tout essayé. Il existe une autre voie. Naturelle. Efficace. Et à portée de main.
+            </p>
+
+            <p class="ebook-section-title">Ce que vous allez découvrir</p>
+            <ul class="ebook-bullets">
+              <li>Remèdes naturels ciblés contre les taches brunes (curcuma, citron, aloe vera)</li>
+              <li>Solutions efficaces pour atténuer les cicatrices anciennes</li>
+              <li>Techniques anti-cernes avec des ingrédients de votre cuisine</li>
+              <li>Routine éclat quotidienne pour un teint uniforme et lumineux</li>
+              <li>Les erreurs courantes qui aggravent vos problèmes de peau</li>
+            </ul>
+
+            <div class="ebook-pour-qui">
+              Ce guide est fait pour vous si vous avez des taches brunes, des cicatrices ou des cernes qui vous complexent. Vous en avez assez de dépenser des fortunes en produits qui ne marchent pas.
+            </div>
+
+            <div class="ebook-price-block">
+              <span class="ebook-price-old">88€</span>
+              <span class="ebook-price">12€</span>
+              <p class="ebook-price-sub">Accès immédiat · PDF téléchargeable</p>
+            </div>
+
+            <a href="https://pagczbja.mychariow.shop/prd_c2swq7/checkout" class="btn btn-cta" target="_blank" rel="noopener">Je veux une peau nette — 12 €</a>
+            <p class="ebook-garantie">🛡️ Garantie 30 jours satisfait ou remboursé</p>
+
+            <div class="mini-reviews">
+              <div class="mini-review">
+                <div class="mini-stars">★★★★★</div>
+                « Mes taches brunes sur les mains et le visage se sont estompées en 6 semaines. Je recommande à 100% ! »
+                <div class="mini-author">— Christine, 64 ans</div>
+              </div>
+              <div class="mini-review">
+                <div class="mini-stars">★★★★★</div>
+                « Je n'ai plus besoin d'anti-cernes ! Les remèdes naturels du Dr Mukendi ont changé ma vie. »
+                <div class="mini-author">— Jacqueline, 65 ans</div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1866,176 +1293,116 @@
 
 
   <!-- ============================================
-       6. SECTION TÉMOIGNAGES (10 témoignages)
+       6. TÉMOIGNAGES
        ============================================ -->
   <section id="temoignages">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-label">Témoignages</span>
         <h2>Elles Ont Transformé Leur Peau Naturellement</h2>
-        <p class="section-subtitle">Plus de 5000 femmes nous font confiance</p>
+        <p class="section-subtitle">Plus de 5000 femmes nous font confiance. Voici leurs histoires.</p>
       </div>
 
       <div class="temoignages-grid">
 
-        <!-- Témoignage 1 — Martine -->
         <div class="temoignage-card reveal">
           <div class="temoignage-header">
             <img class="temoignage-avatar" src="images/temoignage-martine.png" alt="Martine" loading="lazy">
-            <div>
-              <p class="temoignage-name">Martine, 58 ans</p>
-              <p class="temoignage-age">Kinshasa, RDC</p>
-            </div>
+            <div><p class="temoignage-name">Martine, 58 ans</p><p class="temoignage-age">Kinshasa, RDC</p></div>
           </div>
           <div class="temoignage-stars">★★★★★</div>
-          <p class="temoignage-text">
-            « Je me regardais dans le miroir et je ne me reconnaissais plus. Ces rides sur mon front, cette peau qui tombait... J'avais l'impression d'avoir vieilli de 10 ans d'un coup. Après 4 semaines d'exercices faciaux, mon mari m'a dit : "Tu as fait quelque chose à ton visage ? Tu rayonnes." Je n'en revenais pas. »
-          </p>
-          <span class="temoignage-badge">📖 Guide Anti-Âge</span>
+          <p class="temoignage-text">« À 58 ans, j'avais accepté que mon visage allait continuer à se relâcher. Les rides du front me déprimaient chaque matin. J'ai commencé les exercices sans trop y croire. Au bout de 3 semaines, mon mari m'a dit que j'avais l'air reposée. À la semaine 6, c'est MOI qui voyais la différence. »</p>
+          <span class="temoignage-badge badge-guide1">Guide Anti-Âge</span>
         </div>
 
-        <!-- Témoignage 2 — Christine -->
         <div class="temoignage-card reveal reveal-delay-1">
           <div class="temoignage-header">
             <img class="temoignage-avatar" src="images/temoignage-christine.png" alt="Christine" loading="lazy">
-            <div>
-              <p class="temoignage-name">Christine, 64 ans</p>
-              <p class="temoignage-age">Abidjan, Côte d'Ivoire</p>
-            </div>
+            <div><p class="temoignage-name">Christine, 64 ans</p><p class="temoignage-age">Abidjan, Côte d'Ivoire</p></div>
           </div>
           <div class="temoignage-stars">★★★★★</div>
-          <p class="temoignage-text">
-            « Mes taches brunes sur les mains me complexaient depuis des années. J'ai essayé tellement de crèmes chères sans résultat. Le masque au curcuma du guide m'a changé la vie en seulement 6 semaines. Mes mains ont retrouvé un teint uniforme et j'ose enfin les montrer. »
-          </p>
-          <span class="temoignage-badge">📖 Guide Taches &amp; Cernes</span>
+          <p class="temoignage-text">« J'avais des taches brunes sur les mains et les joues depuis des années. J'ai dépensé des centaines d'euros en crèmes. Le guide m'a appris à utiliser du curcuma et du citron de façon efficace. En 8 semaines, mes taches se sont nettement estompées. Ma voisine m'a demandé quel institut j'avais trouvé. Je lui ai dit : ma cuisine ! »</p>
+          <span class="temoignage-badge badge-guide2">Guide Taches & Cernes</span>
         </div>
 
-        <!-- Témoignage 3 — Sylvie -->
         <div class="temoignage-card reveal reveal-delay-2">
           <div class="temoignage-header">
             <img class="temoignage-avatar" src="images/temoignage-sylvie.png" alt="Sylvie" loading="lazy">
-            <div>
-              <p class="temoignage-name">Sylvie, 52 ans</p>
-              <p class="temoignage-age">Douala, Cameroun</p>
-            </div>
+            <div><p class="temoignage-name">Sylvie, 52 ans</p><p class="temoignage-age">Douala, Cameroun</p></div>
           </div>
           <div class="temoignage-stars">★★★★★</div>
-          <p class="temoignage-text">
-            « Mon double menton me rendait folle. Je tournais la tête sur chaque photo pour le cacher. Après le programme de 30 jours, la différence est incroyable. Ma mâchoire est redessinée et je prends enfin des selfies de face. C'est un vrai regain de confiance. »
-          </p>
-          <span class="temoignage-badge">📖 Guide Anti-Âge</span>
+          <p class="temoignage-text">« Ce double menton est apparu du jour au lendemain. J'ai commencé à éviter les photos. Les exercices pour le cou et le menton m'ont bluffée. En 4 semaines, mon menton s'est raffermi et ma mâchoire est plus définie. Je reprends des selfies ! »</p>
+          <span class="temoignage-badge badge-guide1">Guide Anti-Âge</span>
         </div>
 
-        <!-- Témoignage 4 — Brigitte -->
         <div class="temoignage-card reveal">
           <div class="temoignage-header">
             <img class="temoignage-avatar" src="images/temoignage-brigitte.png" alt="Brigitte" loading="lazy">
-            <div>
-              <p class="temoignage-name">Brigitte, 67 ans</p>
-              <p class="temoignage-age">Dakar, Sénégal</p>
-            </div>
+            <div><p class="temoignage-name">Brigitte, 67 ans</p><p class="temoignage-age">Dakar, Sénégal</p></div>
           </div>
           <div class="temoignage-stars">★★★★★</div>
-          <p class="temoignage-text">
-            « À 67 ans, j'avais des cernes si profonds que les gens me demandaient si j'étais malade. La technique du concombre et de l'huile d'amande du guide a tout changé. Mon regard est plus lumineux, plus reposé. Mes petits-enfants me disent que je fais plus jeune ! »
-          </p>
-          <span class="temoignage-badge">📖 Guide Taches &amp; Cernes</span>
+          <p class="temoignage-text">« Mes cernes me donnaient toujours l'air fatiguée, même après 9 heures de sommeil. Avec les compresses naturelles et la routine éclat du guide, mes cernes ont diminué considérablement. À 67 ans, je reçois des compliments sur ma peau. »</p>
+          <span class="temoignage-badge badge-guide2">Guide Taches & Cernes</span>
         </div>
 
-        <!-- Témoignage 5 — Monique -->
         <div class="temoignage-card reveal reveal-delay-1">
           <div class="temoignage-header">
             <img class="temoignage-avatar" src="images/temoignage-monique.png" alt="Monique" loading="lazy">
-            <div>
-              <p class="temoignage-name">Monique, 55 ans</p>
-              <p class="temoignage-age">Brazzaville, Congo</p>
-            </div>
+            <div><p class="temoignage-name">Monique, 55 ans</p><p class="temoignage-age">Brazzaville, Congo</p></div>
           </div>
           <div class="temoignage-stars">★★★★★</div>
-          <p class="temoignage-text">
-            « Les exercices faciaux, j'y croyais pas du tout. Je me disais "c'est des bêtises". Mais au bout de 3 semaines, mes bajoues avaient fondu. Littéralement. Ma sœur m'a demandé si j'avais fait du Botox. Quand je lui ai dit que c'était juste 10 minutes par jour, elle a commandé le guide aussi ! »
-          </p>
-          <span class="temoignage-badge">📖 Guide Anti-Âge</span>
+          <p class="temoignage-text">« J'étais sceptique. Encore un guide miracle, je me suis dit. Mais quand j'ai vu que c'était basé sur une étude scientifique, j'ai essayé. Mes bajoues ont remonté et mon visage paraît plus jeune. 10 minutes par jour, c'est tout ce qu'il faut. »</p>
+          <span class="temoignage-badge badge-guide1">Guide Anti-Âge</span>
         </div>
 
-        <!-- Témoignage 6 — Catherine -->
         <div class="temoignage-card reveal reveal-delay-2">
           <div class="temoignage-header">
             <img class="temoignage-avatar" src="images/temoignage-catherine.png" alt="Catherine" loading="lazy">
-            <div>
-              <p class="temoignage-name">Catherine, 49 ans</p>
-              <p class="temoignage-age">Lomé, Togo</p>
-            </div>
+            <div><p class="temoignage-name">Catherine, 49 ans</p><p class="temoignage-age">Lomé, Togo</p></div>
           </div>
           <div class="temoignage-stars">★★★★★</div>
-          <p class="temoignage-text">
-            « Mes cicatrices d'acné me suivaient depuis l'adolescence. 30 ans à mettre du fond de teint épais pour les cacher. Le sérum naturel au miel et à l'aloe vera du guide les a atténuées comme rien d'autre avant. Je sors enfin sans maquillage et je me sens belle. »
-          </p>
-          <span class="temoignage-badge">📖 Guide Taches &amp; Cernes</span>
+          <p class="temoignage-text">« J'ai des cicatrices d'acné depuis l'adolescence. À presque 50 ans, elles étaient toujours là. Après 6 semaines avec les masques au miel et à l'aloe vera, mes cicatrices sont visiblement atténuées. Je me sens enfin à l'aise sans fond de teint. »</p>
+          <span class="temoignage-badge badge-guide2">Guide Taches & Cernes</span>
         </div>
 
-        <!-- Témoignage 7 — Françoise -->
         <div class="temoignage-card reveal">
           <div class="temoignage-header">
             <img class="temoignage-avatar" src="images/temoignage-francoise.png" alt="Françoise" loading="lazy">
-            <div>
-              <p class="temoignage-name">Françoise, 61 ans</p>
-              <p class="temoignage-age">Paris, France</p>
-            </div>
+            <div><p class="temoignage-name">Françoise, 61 ans</p><p class="temoignage-age">Paris, France</p></div>
           </div>
           <div class="temoignage-stars">★★★★★</div>
-          <p class="temoignage-text">
-            « J'ai suivi le programme des 30 jours à la lettre. Semaine 1 : front. Semaine 2 : joues. Et ainsi de suite. À la fin du mois, la transformation était évidente. Mon ovale du visage est redessiné, ma peau est plus ferme. Je me sens rajeunie de 5 ans, sans avoir dépensé un centime en crèmes. »
-          </p>
-          <span class="temoignage-badge">📖 Guide Anti-Âge</span>
+          <p class="temoignage-text">« Le programme de 30 jours a été une révélation. Chaque semaine je voyais des petits progrès. Au bout du mois complet, la différence était frappante. Le masque lifting express est devenu mon rituel du dimanche. Ma fille m'a dit que je rayonnais. »</p>
+          <span class="temoignage-badge badge-guide1">Guide Anti-Âge</span>
         </div>
 
-        <!-- Témoignage 8 — Nicole -->
         <div class="temoignage-card reveal reveal-delay-1">
           <div class="temoignage-header">
             <img class="temoignage-avatar" src="images/temoignage-nicole.png" alt="Nicole" loading="lazy">
-            <div>
-              <p class="temoignage-name">Nicole, 70 ans</p>
-              <p class="temoignage-age">Libreville, Gabon</p>
-            </div>
+            <div><p class="temoignage-name">Nicole, 70 ans</p><p class="temoignage-age">Libreville, Gabon</p></div>
           </div>
           <div class="temoignage-stars">★★★★★</div>
-          <p class="temoignage-text">
-            « À 70 ans, je pensais que c'était trop tard pour mes taches de vieillesse. Le guide m'a prouvé le contraire. Avec le masque au citron et au yaourt, mes taches sur le décolleté ont pâli semaine après semaine. Mon éclat est revenu. Je me sens vivante et belle à nouveau. »
-          </p>
-          <span class="temoignage-badge">📖 Guide Taches &amp; Cernes</span>
+          <p class="temoignage-text">« À 70 ans, je ne cherchais pas à paraître 30 ans. Je voulais juste un teint uniforme. En 2 mois, mes taches les plus récentes ont presque disparu et les anciennes sont nettement plus claires. Je recommande ce guide à toutes mes amies ! »</p>
+          <span class="temoignage-badge badge-guide2">Guide Taches & Cernes</span>
         </div>
 
-        <!-- Témoignage 9 — Isabelle -->
         <div class="temoignage-card reveal reveal-delay-2">
           <div class="temoignage-header">
             <img class="temoignage-avatar" src="images/temoignage-isabelle.png" alt="Isabelle" loading="lazy">
-            <div>
-              <p class="temoignage-name">Isabelle, 47 ans</p>
-              <p class="temoignage-age">Yaoundé, Cameroun</p>
-            </div>
+            <div><p class="temoignage-name">Isabelle, 47 ans</p><p class="temoignage-age">Yaoundé, Cameroun</p></div>
           </div>
           <div class="temoignage-stars">★★★★★</div>
-          <p class="temoignage-text">
-            « Je n'avais jamais essayé les masques maison. Je trouvais ça "amateur". Mais le masque à la banane et au miel du guide m'a bluffée dès la première utilisation. Ma peau était douce, lumineuse, comme après un soin en institut. Et ça ne m'a coûté que quelques centimes ! »
-          </p>
-          <span class="temoignage-badge">📖 Guide Anti-Âge</span>
+          <p class="temoignage-text">« J'ai commencé à 47 ans, en prévention. Les masques maison ont été ma partie préférée. Ma peau n'a jamais été aussi douce et lumineuse. Mon mari pense que j'ai changé de crème. En réalité, j'utilise les recettes du guide. Plus efficace ET moins cher. »</p>
+          <span class="temoignage-badge badge-guide1">Guide Anti-Âge</span>
         </div>
 
-        <!-- Témoignage 10 — Jacqueline -->
         <div class="temoignage-card reveal">
           <div class="temoignage-header">
             <img class="temoignage-avatar" src="images/temoignage-jacqueline.png" alt="Jacqueline" loading="lazy">
-            <div>
-              <p class="temoignage-name">Jacqueline, 65 ans</p>
-              <p class="temoignage-age">Cotonou, Bénin</p>
-            </div>
+            <div><p class="temoignage-name">Jacqueline, 65 ans</p><p class="temoignage-age">Cotonou, Bénin</p></div>
           </div>
           <div class="temoignage-stars">★★★★★</div>
-          <p class="temoignage-text">
-            « Mes cernes me donnaient un air épuisé en permanence. J'avais honte de sortir sans lunettes de soleil. Grâce aux compresses naturelles et à la routine du guide, mes yeux ont retrouvé leur éclat. J'ai retrouvé confiance en moi et je me maquille à peine maintenant. »
-          </p>
-          <span class="temoignage-badge">📖 Guide Taches &amp; Cernes</span>
+          <p class="temoignage-text">« Les cernes et les taches me faisaient paraître 10 ans de plus. J'avais honte de sortir sans maquillage. Après 5 semaines de routine, ma peau est plus claire, plus nette. J'ai retrouvé confiance en moi. Le meilleur investissement de ma vie. »</p>
+          <span class="temoignage-badge badge-guide2">Guide Taches & Cernes</span>
         </div>
 
       </div>
@@ -2044,59 +1411,42 @@
 
 
   <!-- ============================================
-       7. SECTION POURQUOI MUKENDI SKIN CARE
+       7. POURQUOI MUKENDI
        ============================================ -->
   <section id="pourquoi">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-label">Notre Différence</span>
-        <h2>Pourquoi Choisir Nos Guides</h2>
-        <p class="section-subtitle">Une approche unique qui change tout</p>
+        <h2>Pourquoi des Milliers de Femmes Nous Choisissent</h2>
       </div>
-
       <div class="piliers-grid">
-        <div class="pilier-card reveal">
-          <span class="pilier-icon">🌿</span>
-          <h3>100% Naturel</h3>
-          <p>Aucun produit chimique. Que des ingrédients que vous avez déjà dans votre cuisine.</p>
-        </div>
-        <div class="pilier-card reveal reveal-delay-1">
-          <span class="pilier-icon">👩‍⚕️</span>
-          <h3>Validé Médicalement</h3>
-          <p>Méthodes basées sur la science et l'expérience clinique du Dr Mukendi.</p>
-        </div>
-        <div class="pilier-card reveal reveal-delay-2">
-          <span class="pilier-icon">💰</span>
-          <h3>Économique</h3>
-          <p>Pas besoin de dépenser des fortunes en crèmes. Tout coûte moins de 10€ par mois.</p>
-        </div>
-        <div class="pilier-card reveal reveal-delay-3">
-          <span class="pilier-icon">⏱️</span>
-          <h3>Rapide et Simple</h3>
-          <p>Seulement 10 minutes par jour. Des résultats visibles dès 2 semaines.</p>
-        </div>
+        <div class="pilier-card reveal"><span class="pilier-icon">🌿</span><h3>100% Naturel</h3><p>Aucun produit chimique. Que des ingrédients que vous avez déjà dans votre cuisine : avocat, banane, curcuma, miel, concombre, citron.</p></div>
+        <div class="pilier-card reveal reveal-delay-1"><span class="pilier-icon">👩‍⚕️</span><h3>Validé Médicalement</h3><p>Créé par le Dr Mukendi, médecin avec +10 ans d'expérience. Méthodes basées sur la recherche scientifique et la pratique clinique.</p></div>
+        <div class="pilier-card reveal reveal-delay-2"><span class="pilier-icon">💰</span><h3>Économique</h3><p>Fini les crèmes à 80€ qui ne marchent pas. Nos solutions coûtent moins de 5€ par mois en ingrédients naturels.</p></div>
+        <div class="pilier-card reveal reveal-delay-3"><span class="pilier-icon">⏱️</span><h3>Rapide et Simple</h3><p>Seulement 10 minutes par jour. Des routines claires, illustrées pas à pas. Des résultats visibles dès les 2 premières semaines.</p></div>
       </div>
     </div>
   </section>
 
 
   <!-- ============================================
-       8. SECTION À PROPOS — DR MUKENDI
+       8. À PROPOS DR MUKENDI
        ============================================ -->
-  <section id="a-propos">
+  <section id="dr-mukendi">
     <div class="container">
       <div class="about-grid">
         <div class="about-photo reveal">
-          <div class="about-photo-placeholder" style="padding: 0; overflow: hidden;">
-            <img src="images/dr-mukendi.png" alt="Dr Mukendi — Médecin Généraliste" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+          <div class="about-photo-placeholder">
+            <!-- IMAGE : Photo Dr Mukendi -->
+            <img src="images/dr-mukendi.png" alt="Dr Mukendi — Médecin Généraliste">
           </div>
         </div>
         <div class="about-content reveal reveal-delay-2">
           <span class="section-label">Votre Expert</span>
           <h2>Dr Mukendi</h2>
-          <p class="about-role">Médecin Généraliste — Spécialiste en Santé Naturelle</p>
+          <p class="about-role">Médecin Généraliste — Passionné de Santé Naturelle</p>
           <p class="about-bio">
-            Salut ! C'est Dr Mukendi, Médecin Généraliste passionné par la santé et le bien-être. J'accompagne les femmes à prendre soin d'elles naturellement. Mes programmes anti-âge et soins de la peau sont le fruit de mes recherches et de ma passion pour le bien-être au quotidien.
+            Salut ! C'est Dr Mukendi, Médecin Généraliste passionné par la santé et le bien-être. J'accompagne les femmes à prendre soin d'elles naturellement depuis plus de 10 ans. Mes programmes anti-âge et soins de la peau sont le fruit de mes recherches et de ma passion pour le bien-être au quotidien.
           </p>
           <p class="about-bio">
             Ma mission : vous aider à retrouver une peau ferme et éclatante avec des méthodes simples, naturelles et accessibles à toutes — sans crèmes coûteuses ni interventions médicales.
@@ -2114,173 +1464,90 @@
 
 
   <!-- ============================================
-       9. SECTION STATISTIQUES
+       9. STATISTIQUES
        ============================================ -->
   <div class="stats-section">
     <div class="container">
       <div class="stats-grid">
-        <div class="stat-item reveal">
-          <span class="stat-number">5000+</span>
-          <span class="stat-label">Femmes accompagnées</span>
-        </div>
-        <div class="stat-item reveal reveal-delay-1">
-          <span class="stat-number">98%</span>
-          <span class="stat-label">Taux de satisfaction</span>
-        </div>
-        <div class="stat-item reveal reveal-delay-2">
-          <span class="stat-number">10 ans</span>
-          <span class="stat-label">D'expertise médicale</span>
-        </div>
-        <div class="stat-item reveal reveal-delay-3">
-          <span class="stat-number">30 jours</span>
-          <span class="stat-label">Garantie satisfait ou remboursé</span>
-        </div>
+        <div class="stat-item reveal"><span class="stat-number">5000+</span><span class="stat-label">Femmes Accompagnées</span></div>
+        <div class="stat-item reveal reveal-delay-1"><span class="stat-number">98%</span><span class="stat-label">Taux de Satisfaction</span></div>
+        <div class="stat-item reveal reveal-delay-2"><span class="stat-number">10 ans</span><span class="stat-label">D'Expertise Médicale</span></div>
+        <div class="stat-item reveal reveal-delay-3"><span class="stat-number">30 jours</span><span class="stat-label">Garantie Satisfait ou Remboursé</span></div>
       </div>
     </div>
   </div>
 
 
-  <!-- (Vidéo déplacée après le hero) -->
+  <!-- ============================================
+       10. VIDÉO YOUTUBE
+       ============================================ -->
+  <section id="video">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Découvrez la Méthode</span>
+        <h2>Le Dr Mukendi Vous Explique</h2>
+        <p class="section-subtitle">Regardez cette courte vidéo de présentation</p>
+      </div>
+      <div class="video-wrapper reveal">
+        <iframe src="https://www.youtube.com/embed/wkySzo-bFOQ" title="Présentation Dr Mukendi" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p class="video-cta reveal">Prête à commencer ? → <a href="#guides" style="color: var(--accent-principal); font-weight: 600;">Je découvre les guides</a></p>
+    </div>
+  </section>
 
 
   <!-- ============================================
-       11. SECTION GARANTIE
+       11. GARANTIE
        ============================================ -->
   <div class="garantie-section">
     <div class="container">
       <div class="garantie-content reveal">
         <span class="garantie-icon">🛡️</span>
-        <h2>Notre Garantie 30 Jours</h2>
+        <h2>Notre Garantie 30 Jours — Zéro Risque</h2>
         <p>
-          Essayez nos guides sans risque. Si dans les 30 jours après votre achat, vous n'êtes pas pleinement satisfaite des résultats, nous vous remboursons intégralement. Aucune question posée.
+          Essayez nos guides en toute tranquillité. Si dans les 30 jours après votre achat, vous n'êtes pas pleinement satisfaite des résultats, nous vous remboursons intégralement. Aucune question posée. Vous n'avez absolument rien à perdre.
         </p>
+        <a href="#guides" class="btn btn-primary">Je commence sans risque →</a>
       </div>
     </div>
   </div>
 
 
   <!-- ============================================
-       12. SECTION FAQ
+       12. FAQ
        ============================================ -->
   <section id="faq">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-label">FAQ</span>
-        <h2>Questions Fréquentes</h2>
-        <p class="section-subtitle">Tout ce que vous devez savoir avant de commencer</p>
+        <span class="section-label">Questions Fréquentes</span>
+        <h2>Tout Ce Que Vous Devez Savoir</h2>
       </div>
-
       <div class="faq-list">
-
-        <div class="faq-item reveal">
-          <button class="faq-question" aria-expanded="false">
-            Ce programme fonctionne-t-il vraiment ?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Oui. Les exercices faciaux du guide anti-âge sont basés sur une étude de l'Université Northwestern publiée dans JAMA Dermatology. Les participantes ont paru en moyenne 3 ans plus jeunes après 20 semaines. Tous nos guides utilisent des méthodes scientifiquement validées ou éprouvées par la médecine traditionnelle.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-question" aria-expanded="false">
-            Au bout de combien de temps vais-je voir des résultats ?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Les premiers résultats apparaissent généralement après 2 à 3 semaines de pratique régulière. Les résultats significatifs sur les rides, l'ovale du visage, les taches ou les cernes sont visibles après 4 à 8 semaines.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-question" aria-expanded="false">
-            Combien de temps par jour dois-je consacrer aux exercices ?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Seulement 10 minutes par jour. Nos programmes sont conçus pour s'intégrer facilement dans votre routine quotidienne.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-question" aria-expanded="false">
-            Est-ce adapté à mon âge ?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Nos guides sont conçus pour les femmes de 40 ans et plus qui voient les premiers signes du vieillissement ou des problèmes de peau. Ils peuvent être commencés dès 35 ans en prévention.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-question" aria-expanded="false">
-            Comment vais-je recevoir mes ebooks après l'achat ?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Immédiatement après votre paiement, vous recevrez un email avec le lien de téléchargement de votre PDF. Vous pourrez le consulter sur ordinateur, tablette ou smartphone.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-question" aria-expanded="false">
-            Les ingrédients sont-ils faciles à trouver ?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Oui ! Tous les ingrédients utilisés dans nos masques et soins sont accessibles : avocat, banane, curcuma, concombre, miel... Vous les avez probablement déjà dans votre cuisine.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-question" aria-expanded="false">
-            Et si les guides ne me conviennent pas ?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Vous bénéficiez d'une garantie de 30 jours satisfait ou remboursé. Si vous n'êtes pas satisfaite, écrivez-nous et nous vous remboursons intégralement.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item reveal">
-          <button class="faq-question" aria-expanded="false">
-            Puis-je acheter les deux ebooks ?
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Bien sûr ! Nos deux guides sont complémentaires : l'un cible le vieillissement global du visage, l'autre les imperfections (taches, cicatrices, cernes). Ensemble, ils forment une routine complète.
-            </div>
-          </div>
-        </div>
-
+        <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">Ce programme fonctionne-t-il vraiment ?<span class="faq-arrow">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Oui. Les exercices faciaux du guide anti-âge sont basés sur une étude de l'Université Northwestern publiée dans JAMA Dermatology. Les participantes ont paru en moyenne 3 ans plus jeunes après 20 semaines de pratique. Nos remèdes naturels utilisent des ingrédients dont l'efficacité est reconnue en dermatologie naturelle.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">Au bout de combien de temps vais-je voir des résultats ?<span class="faq-arrow">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Les premiers résultats (peau plus ferme, teint plus lumineux) apparaissent généralement après 2 à 3 semaines de pratique régulière. Les résultats significatifs sur les rides, l'ovale du visage, les taches ou les cernes sont visibles après 4 à 8 semaines.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">Combien de temps par jour dois-je consacrer aux soins ?<span class="faq-arrow">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Seulement 10 minutes par jour. Nos programmes sont conçus pour s'intégrer facilement dans votre routine quotidienne — le matin au réveil ou le soir avant de dormir.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">Est-ce adapté à mon âge ?<span class="faq-arrow">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Nos guides sont conçus pour les femmes qui voient les premiers signes du vieillissement ou des problèmes de peau. Ils sont idéaux à partir de 45 ans, et peuvent être commencés dès 35 ans en prévention.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">Comment vais-je recevoir mes ebooks après l'achat ?<span class="faq-arrow">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Immédiatement après votre paiement, vous recevrez un email avec le lien de téléchargement de votre PDF. Vous pourrez le consulter sur ordinateur, tablette ou smartphone.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">Les ingrédients sont-ils faciles à trouver ?<span class="faq-arrow">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Oui ! Tous les ingrédients sont accessibles : avocat, banane, curcuma, concombre, miel, citron, aloe vera... Vous les avez probablement déjà dans votre cuisine ou au marché le plus proche.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">Et si les guides ne me conviennent pas ?<span class="faq-arrow">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Vous bénéficiez de notre garantie 30 jours satisfait ou remboursé. Si vous n'êtes pas satisfaite, écrivez-nous et nous vous remboursons intégralement, sans aucune question.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">Puis-je acheter les deux ebooks ?<span class="faq-arrow">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Bien sûr ! Nos deux guides sont complémentaires : l'un cible le vieillissement du visage (rides, fermeté, double menton) et l'autre les imperfections (taches, cicatrices, cernes). Ensemble, ils forment une routine beauté naturelle complète.</div></div></div>
       </div>
     </div>
   </section>
 
 
   <!-- ============================================
-       13. SECTION CTA FINAL
+       13. CTA FINAL
        ============================================ -->
   <div class="cta-final">
     <div class="container reveal">
       <h2>Prête à Transformer Votre Peau ?</h2>
-      <p class="section-subtitle">Rejoignez les milliers de femmes qui ont déjà retrouvé confiance en leur reflet</p>
-      <a href="#guides" class="btn btn-terracotta">Découvrir nos guides</a>
+      <p class="section-subtitle">Rejoignez les milliers de femmes qui ont déjà retrouvé confiance en leur reflet. Commencez dès aujourd'hui.</p>
+      <div class="cta-final-buttons">
+        <a href="https://pagczbja.mychariow.shop/prd_1pejkn/checkout" class="btn-cta-final" target="_blank" rel="noopener">Je veux rajeunir — 17 €</a>
+        <a href="https://pagczbja.mychariow.shop/prd_c2swq7/checkout" class="btn-cta-final" target="_blank" rel="noopener">Je veux une peau nette — 12 €</a>
+      </div>
+      <p class="cta-final-trust">🛡️ Garantie 30 jours · 📥 Téléchargement instantané</p>
     </div>
   </div>
 
@@ -2291,77 +1558,43 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-
         <div class="footer-brand">
           <a href="#" class="logo">Mukendi <span>Skin Care</span></a>
-          <p class="footer-tagline">Des solutions naturelles pour révéler l'éclat de votre peau à tout âge. Guides experts par le Dr Mukendi.</p>
+          <p class="footer-tagline">Révélez l'éclat naturel de votre peau avec des méthodes 100% naturelles validées par un médecin.</p>
           <div class="footer-social">
+            <a href="#" aria-label="YouTube">▶️</a>
             <a href="#" aria-label="Instagram">📷</a>
             <a href="#" aria-label="Facebook">📘</a>
-            <a href="#" aria-label="YouTube">▶️</a>
           </div>
         </div>
-
-        <div class="footer-col">
-          <h4>Nos Guides</h4>
-          <ul>
-            <li><a href="https://pagczbja.mychariow.shop/prd_1pejkn/checkout">Guide Anti-Âge</a></li>
-            <li><a href="https://pagczbja.mychariow.shop/prd_c2swq7/checkout">Guide Taches &amp; Cernes</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>À Propos</h4>
-          <ul>
-            <li><a href="#a-propos">Dr Mukendi</a></li>
-            <li><a href="#pourquoi">Notre mission</a></li>
-            <li><a href="#temoignages">Témoignages</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Support</h4>
-          <ul>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Garantie</a></li>
-            <li><a href="#">CGV</a></li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">Confidentialité</a></li>
-          </ul>
-        </div>
-
+        <div class="footer-col"><h4>Nos Guides</h4><ul><li><a href="https://pagczbja.mychariow.shop/prd_1pejkn/checkout" target="_blank">Guide Anti-Âge Naturel</a></li><li><a href="https://pagczbja.mychariow.shop/prd_c2swq7/checkout" target="_blank">Guide Taches & Cernes</a></li></ul></div>
+        <div class="footer-col"><h4>À Propos</h4><ul><li><a href="#dr-mukendi">Dr Mukendi</a></li><li><a href="#pourquoi">Notre Mission</a></li><li><a href="#temoignages">Témoignages</a></li></ul></div>
+        <div class="footer-col"><h4>Support</h4><ul><li><a href="#faq">FAQ</a></li><li><a href="#">Contact</a></li><li><a href="#">Garantie</a></li><li><a href="#">CGV</a></li><li><a href="#">Mentions Légales</a></li><li><a href="#">Confidentialité</a></li></ul></div>
       </div>
-
       <div class="footer-bottom">
         <p>© 2026 Mukendi Skin Care — Tous droits réservés</p>
-        <p style="margin-top: 8px;">Les résultats peuvent varier d'une personne à l'autre. Ces guides ne remplacent pas une consultation médicale.</p>
+        <p style="margin-top: 6px;">Les résultats peuvent varier d'une personne à l'autre. Ces guides ne remplacent pas une consultation médicale.</p>
       </div>
     </div>
   </footer>
 
 
   <!-- ============================================
-       JAVASCRIPT — INTERACTIONS
+       JAVASCRIPT
        ============================================ -->
   <script>
-    // ---- Header sticky avec changement au scroll ----
+    // Header sticky
     const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 60);
-    });
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 50); });
 
-    // ---- Menu hamburger mobile ----
+    // Hamburger
     const hamburger = document.getElementById('hamburger');
     const mobileNav = document.getElementById('mobile-nav');
-
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
       mobileNav.classList.toggle('open');
       document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
     });
-
-    // Fermer le menu mobile au clic sur un lien
     document.querySelectorAll('.mobile-link').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -2370,21 +1603,17 @@
       });
     });
 
-    // ---- Accordéon FAQ ----
+    // FAQ accordéon
     document.querySelectorAll('.faq-question').forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.parentElement;
         const answer = item.querySelector('.faq-answer');
         const isOpen = item.classList.contains('open');
-
-        // Fermer tous les autres
-        document.querySelectorAll('.faq-item.open').forEach(openItem => {
-          openItem.classList.remove('open');
-          openItem.querySelector('.faq-answer').style.maxHeight = null;
-          openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        document.querySelectorAll('.faq-item.open').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-answer').style.maxHeight = null;
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
         });
-
-        // Ouvrir celui cliqué (si pas déjà ouvert)
         if (!isOpen) {
           item.classList.add('open');
           answer.style.maxHeight = answer.scrollHeight + 'px';
@@ -2393,82 +1622,27 @@
       });
     });
 
-    // ---- Animations fade-in au scroll (IntersectionObserver) ----
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -40px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    // ---- Rotation 3D interactive des ebooks ----
+    // Rotation 3D interactive des ebooks
     document.querySelectorAll('.ebook-mockup').forEach(mockup => {
       const book = mockup.querySelector('.book-3d');
-      let isDragging = false;
-      let startX = 0;
-      let currentRotY = -20;
-      const rotX = 4; // inclinaison constante
+      let isDragging = false, startX = 0, currentRotY = -20;
+      const rotX = 4;
 
-      function updateTransform(rotY) {
-        book.style.transition = 'none';
-        book.style.transform = `rotateY(${rotY}deg) rotateX(${rotX}deg)`;
-      }
+      function update(rotY) { book.style.transition = 'none'; book.style.transform = `rotateY(${rotY}deg) rotateX(${rotX}deg)`; }
 
-      // Souris
-      mockup.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startX = e.clientX;
-        mockup.classList.add('dragged');
-      });
+      mockup.addEventListener('mousedown', e => { isDragging = true; startX = e.clientX; mockup.classList.add('dragged'); });
+      window.addEventListener('mousemove', e => { if (!isDragging) return; currentRotY = Math.max(-180, Math.min(180, -20 + (e.clientX - startX) * 0.5)); update(currentRotY); });
+      window.addEventListener('mouseup', () => { if (!isDragging) return; isDragging = false; book.style.transition = 'transform 0.6s ease'; currentRotY = -20; book.style.transform = `rotateY(-20deg) rotateX(4deg)`; });
 
-      window.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        const deltaX = e.clientX - startX;
-        currentRotY = -20 + (deltaX * 0.5);
-        // Limiter la rotation entre -180 et 180
-        currentRotY = Math.max(-180, Math.min(180, currentRotY));
-        updateTransform(currentRotY);
-      });
-
-      window.addEventListener('mouseup', () => {
-        if (!isDragging) return;
-        isDragging = false;
-        // Animation retour douce
-        book.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        currentRotY = -20;
-        book.style.transform = `rotateY(${currentRotY}deg) rotateX(${rotX}deg)`;
-      });
-
-      // Tactile (mobile)
-      mockup.addEventListener('touchstart', (e) => {
-        isDragging = true;
-        startX = e.touches[0].clientX;
-        mockup.classList.add('dragged');
-      }, { passive: true });
-
-      mockup.addEventListener('touchmove', (e) => {
-        if (!isDragging) return;
-        const deltaX = e.touches[0].clientX - startX;
-        currentRotY = -20 + (deltaX * 0.6);
-        currentRotY = Math.max(-180, Math.min(180, currentRotY));
-        updateTransform(currentRotY);
-      }, { passive: true });
-
-      mockup.addEventListener('touchend', () => {
-        if (!isDragging) return;
-        isDragging = false;
-        book.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        currentRotY = -20;
-        book.style.transform = `rotateY(${currentRotY}deg) rotateX(${rotX}deg)`;
-      });
+      mockup.addEventListener('touchstart', e => { isDragging = true; startX = e.touches[0].clientX; mockup.classList.add('dragged'); }, { passive: true });
+      mockup.addEventListener('touchmove', e => { if (!isDragging) return; currentRotY = Math.max(-180, Math.min(180, -20 + (e.touches[0].clientX - startX) * 0.6)); update(currentRotY); }, { passive: true });
+      mockup.addEventListener('touchend', () => { if (!isDragging) return; isDragging = false; book.style.transition = 'transform 0.6s ease'; currentRotY = -20; book.style.transform = `rotateY(-20deg) rotateX(4deg)`; });
     });
+
+    // Animations fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
