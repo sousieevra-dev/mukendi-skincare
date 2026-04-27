@@ -872,6 +872,47 @@
     .faq-answer-inner { padding: 0 24px 20px; font-size: 0.92rem; color: var(--texte-secondaire); line-height: 1.7; }
 
     /* ========================================
+       SECTION WHATSAPP — AVIS CLIENTS
+       ======================================== */
+    .whatsapp-section {
+      background: var(--fond-principal);
+      padding: 90px 0;
+    }
+
+    .whatsapp-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .whatsapp-card {
+      background: var(--blanc);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--ombre-carte);
+      transition: var(--transition);
+    }
+
+    .whatsapp-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--ombre-elevee);
+    }
+
+    .whatsapp-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 1024px) {
+      .whatsapp-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .whatsapp-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+    }
+
+    /* ========================================
        13. CTA FINAL
        ======================================== */
     .cta-final { background: var(--accent-principal); padding: 90px 0; text-align: center; }
@@ -1531,6 +1572,32 @@
         <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">Les ingrédients sont-ils faciles à trouver ?<span class="faq-arrow">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Oui ! Tous les ingrédients sont accessibles : avocat, banane, curcuma, concombre, miel, citron, aloe vera... Vous les avez probablement déjà dans votre cuisine ou au marché le plus proche.</div></div></div>
         <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">Et si les guides ne me conviennent pas ?<span class="faq-arrow">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Vous bénéficiez de notre garantie 30 jours satisfait ou remboursé. Si vous n'êtes pas satisfaite, écrivez-nous et nous vous remboursons intégralement, sans aucune question.</div></div></div>
         <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">Puis-je acheter les deux ebooks ?<span class="faq-arrow">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Bien sûr ! Nos deux guides sont complémentaires : l'un cible le vieillissement du visage (rides, fermeté, double menton) et l'autre les imperfections (taches, cicatrices, cernes). Ensemble, ils forment une routine beauté naturelle complète.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SECTION WHATSAPP — AVIS CLIENTS RÉELS
+       ============================================ -->
+  <section class="whatsapp-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Messages Réels</span>
+        <h2>Elles Nous Écrivent sur WhatsApp</h2>
+        <p class="section-subtitle">Des messages authentiques de nos clientes — non retouchés, non filtrés</p>
+      </div>
+
+      <div class="whatsapp-grid">
+        <div class="whatsapp-card reveal">
+          <img src="images/whatsapp-nathalie.png" alt="Message WhatsApp de Nathalie — 8 semaines de résultats" loading="lazy">
+        </div>
+        <div class="whatsapp-card reveal reveal-delay-1">
+          <img src="images/whatsapp-beatrice.png" alt="Message WhatsApp de Maman Béatrice — 4 semaines de résultats" loading="lazy">
+        </div>
+        <div class="whatsapp-card reveal reveal-delay-2">
+          <img src="images/whatsapp-aissatou.png" alt="Message WhatsApp de Aïssatou — 6 semaines de résultats" loading="lazy">
+        </div>
       </div>
     </div>
   </section>
