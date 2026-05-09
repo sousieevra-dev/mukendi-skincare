@@ -663,6 +663,167 @@
     .mini-review .mini-author { font-weight: 600; color: var(--texte-principal); margin-top: 6px; font-size: 0.8rem; }
 
     /* ========================================
+       SECTION PACK — OFFRE SPÉCIALE
+       ======================================== */
+    .pack-section {
+      background: linear-gradient(145deg, #2a1f18 0%, #3D2F26 50%, #2a1f18 100%);
+      padding: 90px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pack-section::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(184,164,124,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .pack-section .section-label { color: var(--dore); }
+    .pack-section .section-header h2 { color: var(--fond-principal); }
+    .pack-section .section-subtitle { color: rgba(245,241,234,0.7); }
+
+    .pack-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .pack-image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+    }
+
+    .pack-image img { width: 100%; height: auto; display: block; }
+
+    .pack-content { color: var(--fond-principal); }
+
+    .pack-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent-secondaire), #e08a60);
+      color: var(--blanc);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .pack-content h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: var(--fond-principal);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .pack-content .pack-desc {
+      font-size: 0.95rem;
+      color: rgba(245,241,234,0.8);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .pack-includes {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+
+    .pack-includes li {
+      padding: 8px 0;
+      font-size: 0.9rem;
+      color: rgba(245,241,234,0.85);
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .pack-includes li .pack-emoji { flex-shrink: 0; font-size: 1.1rem; }
+
+    .pack-includes li .pack-value {
+      font-size: 0.78rem;
+      color: var(--dore);
+      font-style: italic;
+    }
+
+    .pack-price-block {
+      background: rgba(245,241,234,0.06);
+      border: 1px solid rgba(184,164,124,0.2);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .pack-price-total {
+      font-size: 0.85rem;
+      color: rgba(245,241,234,0.5);
+      margin-bottom: 6px;
+    }
+
+    .pack-price-old {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      color: rgba(245,241,234,0.4);
+      text-decoration: line-through;
+      margin-right: 12px;
+    }
+
+    .pack-price-new {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: var(--dore);
+    }
+
+    .pack-price-save {
+      font-size: 0.82rem;
+      color: var(--accent-secondaire);
+      font-weight: 600;
+      margin-top: 6px;
+    }
+
+    .btn-pack {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, var(--accent-secondaire), #e08a60);
+      color: var(--blanc);
+      border: none;
+      padding: 20px 36px;
+      border-radius: 50px;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn-pack:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(201,123,92,0.4);
+    }
+
+    .pack-garantie {
+      font-size: 0.8rem;
+      color: rgba(245,241,234,0.5);
+      text-align: center;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 1024px) {
+      .pack-grid { grid-template-columns: 1fr; gap: 36px; }
+    }
+
+    /* ========================================
        6. TÉMOIGNAGES
        ======================================== */
     #temoignages { background: var(--fond-principal); }
@@ -1409,6 +1570,57 @@
 
 
   <!-- ============================================
+       SECTION PACK — OFFRE SPÉCIALE
+       ============================================ -->
+  <section class="pack-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">🔥 Offre Spéciale</span>
+        <h2>Le Pack Complet — La Méthode Mukendi</h2>
+        <p class="section-subtitle">3 ebooks pour le prix d'un seul. Tout ce qu'il vous faut pour transformer votre peau.</p>
+      </div>
+
+      <div class="pack-grid">
+        <div class="pack-image reveal">
+          <img src="images/pack-methode-mukendi-cover.png" alt="Pack La Méthode Mukendi — 3 Ebooks" loading="lazy">
+        </div>
+
+        <div class="pack-content reveal reveal-delay-2">
+          <span class="pack-badge">🎁 PACK 3 EBOOKS</span>
+          <h3>La Méthode Mukendi : Comment Avoir une Peau Éclatante, Jeune et Sans Imperfections</h3>
+          <p class="pack-desc">Vous hésitez entre les 3 ebooks ? Prenez-les tous pour moins cher que 2 achetés séparément. Téléchargement immédiat.</p>
+
+          <ul class="pack-includes">
+            <li>
+              <span class="pack-emoji">📕</span>
+              <div>Comment Effacer Taches, Cicatrices et Cernes Naturellement<br><span class="pack-value">Valeur : 5,55 $US</span></div>
+            </li>
+            <li>
+              <span class="pack-emoji">📗</span>
+              <div>Comment Rester Jeune Pratiquement Pour Toujours (Sans Vraiment Essayer)<br><span class="pack-value">Valeur : 9,25 $US</span></div>
+            </li>
+            <li>
+              <span class="pack-emoji">📘</span>
+              <div>Le Secret de Votre Cuisine : 10 Recettes Pour un Visage Éclatant<br><span class="pack-value">Valeur : 7,27 $US</span></div>
+            </li>
+          </ul>
+
+          <div class="pack-price-block">
+            <p class="pack-price-total">Valeur totale : 22,07 $US</p>
+            <span class="pack-price-old">146,62 $US</span>
+            <span class="pack-price-new">13,42 $US</span>
+            <p class="pack-price-save">🔥 Vous économisez plus de 90%</p>
+          </div>
+
+          <a href="https://pagczbja.mychariow.shop/prd_b2pbig/checkout" class="btn-pack" target="_blank" rel="noopener">🎁 Je prends le pack complet — 13,42 $US</a>
+          <p class="pack-garantie">🛡️ Garantie 30 jours · 📥 Téléchargement instantané des 3 ebooks</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
        6. TÉMOIGNAGES
        ============================================ -->
   <section id="temoignages">
@@ -1698,6 +1910,7 @@
         <a href="https://pagczbja.mychariow.shop/prd_1pejkn/checkout" class="btn-cta-final" target="_blank" rel="noopener">Je veux rajeunir — 7,77 €</a>
         <a href="https://pagczbja.mychariow.shop/prd_c2swq7/checkout" class="btn-cta-final" target="_blank" rel="noopener">Je veux une peau nette — 4,57 €</a>
         <a href="https://pagczbja.mychariow.shop/prd_gszwn8/checkout" class="btn-cta-final" target="_blank" rel="noopener">Je veux un visage éclatant — 5,99 €</a>
+        <a href="https://pagczbja.mychariow.shop/prd_b2pbig/checkout" class="btn-cta-final" target="_blank" rel="noopener" style="background: linear-gradient(135deg, var(--accent-secondaire), #e08a60);">🎁 Pack 3 ebooks — 13,42 $US</a>
       </div>
       <p class="cta-final-trust">🛡️ Garantie 30 jours · 📥 Téléchargement instantané</p>
     </div>
