@@ -395,6 +395,8 @@
 
     .ebook-card-full { grid-column: 1 / -1; max-width: 700px; margin: 0 auto; }
 
+    .ebooks-grid-3 { grid-template-columns: repeat(3, 1fr); }
+
     .ebook-discount-badge {
       position: absolute;
       top: 18px; left: 18px;
@@ -1170,6 +1172,7 @@
       .hero-trust { text-align: center; }
       .hero-image img { height: 420px; }
       .ebooks-grid { grid-template-columns: 1fr; }
+      .ebooks-grid-3 { grid-template-columns: 1fr 1fr; }
       .ba-grid { grid-template-columns: 1fr 1fr; }
       .temoignages-grid { grid-template-columns: 1fr 1fr; }
       .piliers-grid { grid-template-columns: 1fr 1fr; }
@@ -1190,6 +1193,7 @@
       .trust-items { flex-direction: column; align-items: center; gap: 10px; }
       .ba-grid { grid-template-columns: 1fr; }
       .temoignages-grid { grid-template-columns: 1fr; }
+      .ebooks-grid-3 { grid-template-columns: 1fr; }
       .piliers-grid { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
       .footer-grid { grid-template-columns: 1fr; text-align: center; }
@@ -1591,7 +1595,7 @@
         <p class="section-subtitle">De nouvelles solutions naturelles pour des problèmes spécifiques</p>
       </div>
 
-      <div class="ebooks-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="ebooks-grid ebooks-grid-3">
 
         <!-- EBOOK 4 — Taches Blanches -->
         <div class="ebook-card reveal">
