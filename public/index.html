@@ -343,6 +343,211 @@
     }
 
     /* ========================================
+       SECTION PRODUIT PREMIUM — DÉFI 30 JOURS
+       ======================================== */
+    .premium-section {
+      background: linear-gradient(160deg, #2a3528 0%, #3D4A32 40%, #2a3528 100%);
+      padding: 90px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .premium-section::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 350px; height: 350px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(184,164,124,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .premium-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .premium-image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+      border: 2px solid rgba(184,164,124,0.3);
+    }
+
+    .premium-image img { width: 100%; height: auto; display: block; }
+
+    .premium-content { color: var(--fond-principal); }
+
+    .premium-label {
+      display: inline-block;
+      background: linear-gradient(135deg, #B8A47C, #d4c4a0);
+      color: #2a3528;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .premium-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--fond-principal);
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .premium-content .premium-subtitle {
+      font-size: 1rem;
+      color: var(--dore);
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .premium-content .premium-desc {
+      font-size: 0.92rem;
+      color: rgba(245,241,234,0.8);
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    .premium-highlights {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .premium-highlights li {
+      font-size: 0.88rem;
+      color: rgba(245,241,234,0.85);
+      padding: 5px 0;
+      padding-left: 24px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .premium-highlights li::before { content: '✅'; position: absolute; left: 0; font-size: 0.8rem; }
+
+    .premium-modules {
+      background: rgba(245,241,234,0.06);
+      border: 1px solid rgba(184,164,124,0.15);
+      border-radius: var(--radius);
+      padding: 22px;
+      margin-bottom: 22px;
+    }
+
+    .premium-modules h4 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--dore);
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+    }
+
+    .premium-modules ul { list-style: none; }
+
+    .premium-modules ul li {
+      font-size: 0.82rem;
+      color: rgba(245,241,234,0.7);
+      padding: 4px 0;
+      padding-left: 22px;
+      position: relative;
+    }
+
+    .premium-modules ul li::before { content: '▸'; position: absolute; left: 6px; color: var(--dore); }
+
+    .premium-bonus {
+      background: rgba(184,164,124,0.1);
+      border: 1px solid rgba(184,164,124,0.2);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin-bottom: 24px;
+    }
+
+    .premium-bonus h4 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--dore);
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .premium-bonus p {
+      font-size: 0.82rem;
+      color: rgba(245,241,234,0.65);
+      line-height: 1.6;
+    }
+
+    .premium-price-block {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .premium-price-old {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      color: rgba(245,241,234,0.35);
+      text-decoration: line-through;
+      margin-right: 12px;
+    }
+
+    .premium-price-new {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.4rem;
+      font-weight: 700;
+      color: var(--dore);
+    }
+
+    .premium-price-note {
+      font-size: 0.8rem;
+      color: rgba(245,241,234,0.5);
+      margin-top: 6px;
+    }
+
+    .premium-urgency {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--accent-secondaire);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .btn-premium {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, var(--dore), #d4c4a0);
+      color: #2a3528;
+      border: none;
+      padding: 20px 36px;
+      border-radius: 50px;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn-premium:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(184,164,124,0.4);
+    }
+
+    .premium-garantie {
+      font-size: 0.78rem;
+      color: rgba(245,241,234,0.5);
+      text-align: center;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 1024px) {
+      .premium-grid { grid-template-columns: 1fr; gap: 36px; }
+    }
+
+    /* ========================================
        4. AVANT / APRÈS
        ======================================== */
     #transformations { background: var(--fond-principal); }
@@ -1303,6 +1508,69 @@
 
 
   <!-- ============================================
+       PRODUIT PREMIUM — DÉFI 30 JOURS
+       ============================================ -->
+  <section class="premium-section">
+    <div class="container">
+      <div class="premium-grid">
+        <div class="premium-image reveal">
+          <img src="images/couverture-defi-30-jours.png" alt="Le Défi 30 Jours — Visage Sculpté avec Coach Sophie" loading="lazy">
+        </div>
+
+        <div class="premium-content reveal reveal-delay-2">
+          <span class="premium-label">⭐ Programme Phare</span>
+          <h2>LE DÉFI 30 JOURS — VISAGE SCULPTÉ</h2>
+          <p class="premium-subtitle">Version Vidéo guidée par Coach Sophie étape par étape — La Méthode Mukendi™</p>
+
+          <p class="premium-desc">
+            Transformez votre visage en 30 jours. Raffermissez, liftez et illuminez votre visage naturellement — avec une méthode claire : exercices ciblés + masques maison + rituel à vie. En seulement 10 minutes par jour, guidée pas à pas par Coach Sophie.
+          </p>
+
+          <ul class="premium-highlights">
+            <li>Même si vous partez de zéro et n'avez jamais fait de yoga facial</li>
+            <li>Même si vous avez plus de 50 ans et pensez qu'il est "trop tard"</li>
+            <li>Même si vous manquez de temps — 10 minutes par jour suffisent</li>
+            <li>Accès à vie + téléchargement immédiat</li>
+          </ul>
+
+          <div class="premium-modules">
+            <h4>📋 Ce que vous recevez</h4>
+            <ul>
+              <li>Introduction : Comprendre pourquoi votre visage change + preuve scientifique</li>
+              <li>Module 1 — Phase Réveil : Front, ride du lion, paupières, pattes d'oie</li>
+              <li>Module 2 — Phase Volume : Joues, pommettes, sillons + drainage</li>
+              <li>Module 3 — Phase Sculpter : Lèvres, bajoues, ovale + massage</li>
+              <li>Module 4 — Phase Rituel à Vie : Cou, double menton + routine 10 min</li>
+              <li>Module 5 : 5 masques glow maison 100% naturels</li>
+              <li>Module 6 : Les 5 erreurs qui vieillissent votre visage</li>
+              <li>Module 7 : Comment garder vos résultats à vie</li>
+            </ul>
+          </div>
+
+          <div class="premium-bonus">
+            <h4>🎁 4 BONUS INCLUS (valeur 38€)</h4>
+            <p>
+              📖 Comment Rester Jeune Pratiquement Pour Toujours — Sans Vraiment Essayer (17€) · ⚡ Routine express 5 min spécial événement (9€) · 📕 Comment Effacer Taches, Cicatrices et Cernes Naturellement (5€) · 📘 Le Secret de Votre Cuisine — 10 recettes pour un visage éclatant (7€)
+            </p>
+          </div>
+
+          <div class="premium-price-block">
+            <span class="premium-price-old">129€</span>
+            <span class="premium-price-new">49€</span>
+            <p class="premium-price-note">Paiement unique · Accès à vie · Téléchargement immédiat</p>
+          </div>
+
+          <p class="premium-urgency">⏰ Prix spécial pour les 50 premières inscrites — Vous économisez 80€</p>
+
+          <a href="https://pagczbja.mychariow.shop/prd_xkoqvicn/checkout" class="btn-premium" target="_blank" rel="noopener">⭐ Je rejoins le Défi 30 Jours — 49 €</a>
+          <p class="premium-garantie">✅ Garantie 30 jours satisfaite ou remboursée · Aucun risque</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
        4. AVANT / APRÈS
        ============================================ -->
   <section id="transformations">
@@ -2136,6 +2404,7 @@
       <h2>Prête à Transformer Votre Peau ?</h2>
       <p class="section-subtitle">Rejoignez les milliers de femmes qui ont déjà retrouvé confiance en leur reflet. Commencez dès aujourd'hui.</p>
       <div class="cta-final-buttons">
+        <a href="https://pagczbja.mychariow.shop/prd_xkoqvicn/checkout" class="btn-cta-final" target="_blank" rel="noopener" style="background: linear-gradient(135deg, var(--dore), #d4c4a0); color: #2a3528;">⭐ Défi 30 Jours — 49 €</a>
         <a href="https://pagczbja.mychariow.shop/prd_1pejkn/checkout" class="btn-cta-final" target="_blank" rel="noopener">Guide Anti-Âge — 7,77 €</a>
         <a href="https://pagczbja.mychariow.shop/prd_c2swq7/checkout" class="btn-cta-final" target="_blank" rel="noopener">Guide Taches & Cernes — 4,57 €</a>
         <a href="https://pagczbja.mychariow.shop/prd_gszwn8/checkout" class="btn-cta-final" target="_blank" rel="noopener">Secret de Votre Cuisine — 5,99 €</a>
@@ -2165,7 +2434,7 @@
             <a href="#" aria-label="Facebook">📘</a>
           </div>
         </div>
-        <div class="footer-col"><h4>Nos Guides</h4><ul><li><a href="https://pagczbja.mychariow.shop/prd_1pejkn/checkout" target="_blank">Guide Anti-Âge Naturel</a></li><li><a href="https://pagczbja.mychariow.shop/prd_c2swq7/checkout" target="_blank">Guide Taches & Cernes</a></li><li><a href="https://pagczbja.mychariow.shop/prd_gszwn8/checkout" target="_blank">Le Secret de Votre Cuisine</a></li><li><a href="https://pagczbja.mychariow.shop/prd_w064yya0/checkout" target="_blank">Taches Blanches Jambes</a></li><li><a href="https://pagczbja.mychariow.shop/prd_i5vniadt/checkout" target="_blank">Effacer les Vergetures</a></li><li><a href="https://pagczbja.mychariow.shop/prd_6q6vno2h/checkout" target="_blank">Éliminer les Points Noirs</a></li></ul></div>
+        <div class="footer-col"><h4>Nos Guides</h4><ul><li><a href="https://pagczbja.mychariow.shop/prd_xkoqvicn/checkout" target="_blank">⭐ Défi 30 Jours — Visage Sculpté</a></li><li><a href="https://pagczbja.mychariow.shop/prd_1pejkn/checkout" target="_blank">Guide Anti-Âge Naturel</a></li><li><a href="https://pagczbja.mychariow.shop/prd_c2swq7/checkout" target="_blank">Guide Taches & Cernes</a></li><li><a href="https://pagczbja.mychariow.shop/prd_gszwn8/checkout" target="_blank">Le Secret de Votre Cuisine</a></li><li><a href="https://pagczbja.mychariow.shop/prd_w064yya0/checkout" target="_blank">Taches Blanches Jambes</a></li><li><a href="https://pagczbja.mychariow.shop/prd_i5vniadt/checkout" target="_blank">Effacer les Vergetures</a></li><li><a href="https://pagczbja.mychariow.shop/prd_6q6vno2h/checkout" target="_blank">Éliminer les Points Noirs</a></li></ul></div>
         <div class="footer-col"><h4>À Propos</h4><ul><li><a href="#dr-mukendi">Dr Mukendi</a></li><li><a href="#pourquoi">Notre Mission</a></li><li><a href="#temoignages">Témoignages</a></li></ul></div>
         <div class="footer-col"><h4>Support</h4><ul><li><a href="#faq">FAQ</a></li><li><a href="#">Contact</a></li><li><a href="#">Garantie</a></li><li><a href="#">CGV</a></li><li><a href="#">Mentions Légales</a></li><li><a href="#">Confidentialité</a></li></ul></div>
       </div>
