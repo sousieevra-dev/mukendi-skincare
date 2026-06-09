@@ -160,6 +160,70 @@
     }
 
     /* ========================================
+       BANNIÈRE PROMO TOP
+       ======================================== */
+    .promo-banner {
+      background: linear-gradient(135deg, #2a3528, #3D4A32);
+      color: var(--fond-principal);
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      position: relative;
+      z-index: 1001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .promo-banner .promo-text {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .promo-banner .promo-highlight {
+      color: var(--dore);
+      font-weight: 700;
+    }
+
+    .promo-banner .promo-timer {
+      background: rgba(245,241,234,0.12);
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent-secondaire);
+      letter-spacing: 1px;
+    }
+
+    .promo-banner .promo-cta {
+      background: var(--dore);
+      color: #2a3528;
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .promo-banner .promo-cta:hover {
+      background: #d4c4a0;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 640px) {
+      .promo-banner { font-size: 0.75rem; padding: 8px 14px; }
+      .promo-banner .promo-timer { font-size: 0.75rem; }
+    }
+
+    /* ========================================
        1. HEADER
        ======================================== */
     .site-header {
@@ -1421,6 +1485,17 @@
 <body>
 
   <!-- ============================================
+       BANNIÈRE PROMO TOP
+       ============================================ -->
+  <div class="promo-banner" id="promo-banner">
+    <div class="promo-text">
+      🔥 <span class="promo-highlight">Comment Rester Jeune Pratiquement Pour Toujours (Sans Vraiment Essayer)</span> — VERSION VIDÉO ·
+      <span class="promo-timer" id="promo-timer">23:59:59</span>
+    </div>
+    <a href="https://pagczbja.mychariow.shop/prd_xkoqvicn/checkout" class="promo-cta" target="_blank" rel="noopener">J'EN PROFITE →</a>
+  </div>
+
+  <!-- ============================================
        1. HEADER
        ============================================ -->
   <header class="site-header" id="header">
@@ -2458,6 +2533,28 @@
        JAVASCRIPT
        ============================================ -->
   <script>
+    // Compte à rebours promo 24H
+    (function() {
+      const timerEl = document.getElementById('promo-timer');
+      if (!timerEl) return;
+      let stored = localStorage.getItem('promo-end');
+      if (!stored) {
+        stored = Date.now() + 24 * 60 * 60 * 1000;
+        localStorage.setItem('promo-end', stored);
+      }
+      const end = parseInt(stored);
+      function update() {
+        const diff = end - Date.now();
+        if (diff <= 0) { timerEl.textContent = '00:00:00'; return; }
+        const h = Math.floor(diff / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        timerEl.textContent = String(h).padStart(2,'0') + ':' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+      }
+      update();
+      setInterval(update, 1000);
+    })();
+
     // Header sticky
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 50); });
